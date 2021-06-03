@@ -9,15 +9,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.submission.victorio_jetpackpro.R
-import data.tv.TvShowEntity
+import source.remote.response.tv.ResultsItem
 
-class TvShowAdapter(private val listTvShow: MutableList<TvShowEntity>? = mutableListOf(),
-                    private val onClickListener: ((TvShowEntity) -> Unit)? = null
+class TvShowAdapter(private val listTvShow: MutableList<ResultsItem?>? = mutableListOf(),
+                    private val onClickListener: ((ResultsItem) -> Unit)? = null
 ) : RecyclerView.Adapter<TvShowAdapter.ListViewHolder>() {
     private lateinit var view: View
 
+    companion object {
+        const val imageFormatter = "https://image.tmdb.org/t/p/w500"
+    }
 
-    fun setTvShow(tvShow: List<TvShowEntity>?) {
+
+    fun setTvShow(tvShow: List<ResultsItem?>?) {
         if (tvShow == null) return
         this.listTvShow?.clear()
         this.listTvShow?.addAll(tvShow)
@@ -42,14 +46,14 @@ class TvShowAdapter(private val listTvShow: MutableList<TvShowEntity>? = mutable
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val movieItem = listTvShow?.get(position)
-        holder.txtTitle.text = movieItem?.title
-        holder.txtGenre.text = movieItem?.genre
-        holder.txtRelease.text = movieItem?.release_date
+        holder.txtTitle.text = movieItem?.originalName
+        holder.txtGenre.text = movieItem?.genreIds.toString()
+        holder.txtRelease.text = movieItem?.firstAirDate.toString()
 
 
 
         Glide.with(view.context)
-                .load(movieItem?.poster)
+                .load(imageFormatter+movieItem?.posterPath)
                 .apply(RequestOptions.placeholderOf(R.drawable.ic_loading)
                         .error(R.drawable.ic_error))
                 .into(holder.imageMovie)

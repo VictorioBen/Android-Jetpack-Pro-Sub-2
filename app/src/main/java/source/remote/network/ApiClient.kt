@@ -11,6 +11,7 @@ import source.remote.response.movie.MovieDetailResponse
 import source.remote.response.movie.MovieResponsePopular
 import source.remote.response.tv.DetailTvListResponse
 import source.remote.response.tv.TvListResponse
+import source.remote.response.tv.TvResponsePopular
 
 class ApiClient {
     companion object {
@@ -36,7 +37,8 @@ interface ApiService {
     suspend fun getDetailMovie(@Path("movie_id") movie_id: Int, @Query("api_key") apiKey: String): Call<MovieDetailResponse>
 
     @GET("tv/popular")
-    suspend fun getPopularTv(@Query("api_key") apiKey: String): Call<TvListResponse>
+    @Headers("Authorization: token 0f39d26119b683bda02291ee16a9a348")
+    fun getPopularTv(@Query("api_key") apiKey: String): Call<TvResponsePopular>
 
     @GET("tv/{tv_id}")
     suspend fun getDetailTv(@Path("tv_id") tv_id: Int, @Query("api_key") apiKey: String): Call<DetailTvListResponse>
