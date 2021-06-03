@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    android:background="@color/White_monotone"
-
     tools:context="ui.movies.MovieFragment">
 
   <androidx.recyclerview.widget.RecyclerView
@@ -13,7 +12,6 @@
       android:layout_marginStart="3dp"
       android:layout_marginTop="5dp"
       android:layout_marginEnd="3dp"
-
-      tools:listitem="@layout/item_row_movie" />
+      tools:listitem="@layout/items_movie" />
 
 </FrameLayout>

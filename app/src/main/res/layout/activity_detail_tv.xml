@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     android:orientation="vertical"
-    tools:context="ui.detail.movies.DetailMovieActivity">
+    tools:context="ui.detail.tv.DetailTvActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -14,7 +14,6 @@
         android:layout_height="50dp"
         app:title="@string/detail"
         app:titleTextColor="@color/Yellow"
-
         />
 
     <androidx.core.widget.NestedScrollView
@@ -37,7 +36,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageMovieDetail"
+                    android:id="@+id/imageTvDetail"
                     android:layout_width="170dp"
                     android:layout_height="250dp"
                     android:src="@drawable/ic_broken_image_black"
@@ -49,7 +48,7 @@
 
 
             <TextView
-                android:id="@+id/txtTitleDetail"
+                android:id="@+id/txtTitleTvDetail"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="@string/title_movie_2"
@@ -71,10 +70,10 @@
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView2"
-                app:layout_constraintTop_toBottomOf="@+id/txtTitleDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtTitleTvDetail" />
 
             <TextView
-                android:id="@+id/txtGenreDetail"
+                android:id="@+id/txtGenreTvDetail"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
@@ -95,10 +94,10 @@
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView2"
-                app:layout_constraintTop_toBottomOf="@+id/txtGenreDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtGenreTvDetail" />
 
             <TextView
-                android:id="@+id/txtDurationDetail"
+                android:id="@+id/txtDurationTvDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sub_duration"
@@ -117,10 +116,10 @@
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView2"
-                app:layout_constraintTop_toBottomOf="@+id/txtDurationDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtDurationTvDetail" />
 
             <TextView
-                android:id="@+id/txtDirectorDetail"
+                android:id="@+id/txtDirectorTvDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sub_director"
@@ -137,12 +136,12 @@
                 android:text="@string/age"
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/txtDirectorDetail"
-                app:layout_constraintTop_toBottomOf="@+id/txtDirectorDetail" />
+                app:layout_constraintStart_toStartOf="@+id/txtDirectorTvDetail"
+                app:layout_constraintTop_toBottomOf="@+id/txtDirectorTvDetail" />
 
 
             <TextView
-                android:id="@+id/txtAgeDetail"
+                android:id="@+id/txtAgeTvDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tv_ma"
@@ -176,7 +175,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <TextView
-                android:id="@+id/txtSynopsisDetail"
+                android:id="@+id/txtSynopsisTvDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="7dp"
@@ -201,7 +200,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtSynopsisDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtSynopsisTvDetail" />
 
             <View
                 android:id="@+id/view2"
@@ -215,7 +214,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
             <TextView
-                android:id="@+id/txtRateDetail"
+                android:id="@+id/txtRateTvDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"

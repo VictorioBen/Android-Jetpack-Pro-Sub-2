@@ -1,12 +1,12 @@
-package data.movies
+package data.tv
 
 import android.os.Parcel
 import android.os.Parcelable
 
-data class MovieEntity(var movieID: String, var title: String,
-                       var director: String, var poster: Int, var age: String, var genre: String,
-                       var duration: String, var rating: String, var category: String, var release_date: String,
-                       var synopsis: String) : Parcelable {
+data class TvShowEntity(var tvShowID: String, var title: String,
+                         var director: String, var poster: Int, var age: String, var genre: String,
+                          var duration: String, var rating: String, var category: String, var release_date: String,
+                         var synopsis: String): Parcelable{
     constructor(parcel: Parcel) : this(
             parcel.readString().toString(),
             parcel.readString().toString(),
@@ -19,9 +19,8 @@ data class MovieEntity(var movieID: String, var title: String,
             parcel.readString().toString(),
             parcel.readString().toString(),
             parcel.readString().toString())
-
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(movieID)
+        parcel.writeString(tvShowID)
         parcel.writeString(title)
         parcel.writeString(director)
         parcel.writeInt(poster)
@@ -38,13 +37,14 @@ data class MovieEntity(var movieID: String, var title: String,
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<MovieEntity> {
-        override fun createFromParcel(parcel: Parcel): MovieEntity {
-            return MovieEntity(parcel)
+    companion object CREATOR : Parcelable.Creator<TvShowEntity> {
+        override fun createFromParcel(parcel: Parcel): TvShowEntity {
+            return TvShowEntity(parcel)
         }
 
-        override fun newArray(size: Int): Array<MovieEntity?> {
+        override fun newArray(size: Int): Array<TvShowEntity?> {
             return arrayOfNulls(size)
         }
     }
+
 }

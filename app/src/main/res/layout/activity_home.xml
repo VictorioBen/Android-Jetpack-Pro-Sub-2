@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorAccentTwo"
-    tools:context="activity.HomeActivity">
+    tools:context="ui.home.HomeActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -36,6 +36,7 @@
             android:text="@string/movies" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_show" />

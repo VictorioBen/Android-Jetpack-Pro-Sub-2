@@ -11,16 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Victorio_jetpackpro">
+        <activity android:name="ui.detail.tv.DetailTvActivity"
+            android:label="Detail TvShow"
+            android:parentActivityName="ui.home.HomeActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
         <activity
-            android:parentActivityName="activity.HomeActivity"
-            android:name="activity.DetailMovieActivity"
+            android:name="ui.detail.movies.DetailMovieActivity"
             android:label="@string/title_activity_detail_movie"
-            android:theme="@style/Theme.Victorio_jetpackpro.NoActionBar"></activity>
+            android:parentActivityName="ui.home.HomeActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name="activity.HomeActivity"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar"></activity>
+            android:name="ui.home.HomeActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
         <activity
-            android:name="activity.SplashScreenActivity"
+            android:name="ui.SplashScreen.SplashScreenActivity"
             android:theme="@style/Theme.MaterialComponents.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

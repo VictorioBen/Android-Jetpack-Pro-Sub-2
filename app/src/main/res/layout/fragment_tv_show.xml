@@ -2,14 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fragments.TvShowFragment">
+    android:background="@color/White_monotone"
+    tools:context="ui.tv.TvShowFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerTvShow"
+        android:id="@+id/rvTvShow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="2dp"
-        tools:listitem="@layout/item_row_movie" />
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="5dp"
+        tools:listitem="@layout/items_tv" />
 
 </FrameLayout>

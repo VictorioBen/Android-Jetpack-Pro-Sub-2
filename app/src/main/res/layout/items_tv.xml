@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/colorAccentTwo"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageTv"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:src="@drawable/poster_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txtTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imageTv"
+                android:text="@string/movie_1"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/White"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/imageTv"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/txtGenreTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imageTv"
+                android:text="@string/thriller"
+                android:textSize="16sp"
+                android:textColor="@color/White_monotone"
+                app:layout_constraintStart_toStartOf="@+id/txtTitleTv"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitleTv" />
+
+
+            <TextView
+                android:id="@+id/txtReleaseTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@id/imageTv"
+                android:layout_marginEnd="10dp"
+                android:textSize="16sp"
+                android:text="@string/date_release"
+                android:textColor="@color/White_monotone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

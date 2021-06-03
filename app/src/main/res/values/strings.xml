@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">DiMovies</string>
-    <string name="bio_movie">The Largest Free Movie</string>
+    <string name="bio_movie">Top Ten Movies and Tv Show</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="movie_1">No Body</string>
@@ -19,4 +19,18 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="genre">Genre</string>
+    <string name="sub_genre">Drama, Percintaan, Musik</string>
+    <string name="duration">Durasi</string>
+    <string name="sub_duration">1h 3Om</string>
+    <string name="sub_director">Hajime Kamegaki</string>
+    <string name="title_movie_2">A Star Is Born</string>
+    <string name="tv_ma">TV-MA</string>
+    <string name="director_title">Director</string>
+    <string name="txt_synopsis">Seorang bintang musik country yang karirnya mulai memudar,Jackson Maine (Bradley Cooper) menemukan sebuah talenta yang sangat berbakat di dalam diri dari seorang musisi muda bernama Ally (Lady Gaga). Maine berhasil mengorbitkan Ally menjadi seorang bintang muda yang menjanjikan. Namun keduanya terlibat hubungan yang lebih jauh dari sekedar mentor dan anak didik. Seiring dengan meroketnya karir dari Ally dan dirinya, Maine mengalami dilema mengenai masalah ini</string>
+    <string name="synopsis">Cerita Singkat</string>
+    <string name="age">Rating Usia</string>
+    <string name="rate_movie">Rating Film</string>
+    <string name="txt_rate_movie">82</string>
+    <string name="detail">Detail</string>
 </resources>
