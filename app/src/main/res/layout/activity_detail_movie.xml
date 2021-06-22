@@ -17,14 +17,27 @@
 
         />
 
+    <ProgressBar
+        android:id="@+id/progress_bar2"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/movieDetailLayout"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="50dp">
+
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
@@ -67,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/genre"
+                android:text="@string/tagline"
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView2"
@@ -113,17 +126,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="3dp"
-                android:text="@string/director_title"
+                android:text="@string/release"
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView2"
                 app:layout_constraintTop_toBottomOf="@+id/txtDurationDetail" />
 
             <TextView
-                android:id="@+id/txtDirectorDetail"
+                android:id="@+id/txtRelease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sub_director"
+                android:text="@string/date_release"
                 android:textColor="@color/White"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView8"
@@ -137,15 +150,15 @@
                 android:text="@string/age"
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/txtDirectorDetail"
-                app:layout_constraintTop_toBottomOf="@+id/txtDirectorDetail" />
+                app:layout_constraintStart_toStartOf="@+id/txtRelease"
+                app:layout_constraintTop_toBottomOf="@+id/txtRelease" />
 
 
             <TextView
-                android:id="@+id/txtAgeDetail"
+                android:id="@+id/txtStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tv_ma"
+                android:text="@string/status"
                 android:textColor="@color/White"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView10"
@@ -215,7 +228,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
             <TextView
-                android:id="@+id/txtRateDetail"
+                android:id="@+id/txtRateDetail2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"

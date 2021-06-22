@@ -33,4 +33,7 @@
     <string name="rate_movie">Rating Film</string>
     <string name="txt_rate_movie">82</string>
     <string name="detail">Detail</string>
+    <string name="status">status</string>
+    <string name="tagline">tagline</string>
+    <string name="release">Tanggal Rilis</string>
 </resources>

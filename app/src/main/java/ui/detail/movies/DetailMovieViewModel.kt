@@ -1,29 +1,16 @@
 package ui.detail.movies
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import data.movies.MovieEntity
+import source.remote.repository.movie.MovieRepository
+import source.remote.response.movie.MovieDetailResponse
 import utils.dataDummy.DataDummy
 
-class DetailMovieViewModel: ViewModel() {
-    private lateinit var detailID: String
-
-    fun setSelectedDetail(detailID: String) {
-        this.detailID = detailID
-    }
-
-    fun getMovie(): MovieEntity {
-        lateinit var movie: MovieEntity
-        val movieEntities = DataDummy.generateDummyMovies()
-        for (movieEntity in movieEntities) {
-            if (movieEntity.movieID == detailID) {
-                movie = movieEntity
-            }
-        }
-        return movie
-    }
+class DetailMovieViewModel(private val movieRepository: MovieRepository): ViewModel() {
 
 
 
+     fun getDetail(movieId: Int, api:String): LiveData<MovieDetailResponse> = movieRepository.getDetailMovie(movieId, api)
 
 
 }

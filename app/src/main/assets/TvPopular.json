@@ -1,0 +1,411 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "backdrop_path": "/ykElAtsOBoArgI1A8ATVH0MNve0.jpg",
+      "first_air_date": "2021-06-09",
+      "genre_ids": [
+        18,
+        10765
+      ],
+      "id": 84958,
+      "name": "Loki",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Loki",
+      "overview": "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant”or help fix the timeline and stop a greater threat.",
+      "popularity": 5171.482,
+      "poster_path": "/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg",
+      "vote_average": 8.1,
+      "vote_count": 3478
+    },
+    {
+      "backdrop_path": "/1qOA3kMtQO8bjnW8M2smjA8tp10.jpg",
+      "first_air_date": "2018-10-05",
+      "genre_ids": [
+        80,
+        9648,
+        18
+      ],
+      "id": 76669,
+      "name": "Elite",
+      "origin_country": [
+        "ES"
+      ],
+      "original_language": "es",
+      "original_name": "Élite",
+      "overview": "When three working class kids enroll in the most exclusive school in Spain, the clash between the wealthy and the poor students leads to tragedy.",
+      "popularity": 3453.195,
+      "poster_path": "/3NTAbAiao4JLzFQw6YxP1YZppM8.jpg",
+      "vote_average": 8.2,
+      "vote_count": 6823
+    },
+    {
+      "backdrop_path": "/h48Dpb7ljv8WQvVdyFWVLz64h4G.jpg",
+      "first_air_date": "2016-01-25",
+      "genre_ids": [
+        80,
+        10765
+      ],
+      "id": 63174,
+      "name": "Lucifer",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Lucifer",
+      "overview": "Bored and unhappy as the Lord of Hell, Lucifer Morningstar abandoned his throne and retired to Los Angeles, where he has teamed up with LAPD detective Chloe Decker to take down criminals. But the longer he's away from the underworld, the greater the threat that the worst of humanity could escape.",
+      "popularity": 1201.503,
+      "poster_path": "/4EYPN5mVIhKLfxGruy7Dy41dTVn.jpg",
+      "vote_average": 8.5,
+      "vote_count": 9334
+    },
+    {
+      "backdrop_path": "/9Jmd1OumCjaXDkpllbSGi2EpJvl.jpg",
+      "first_air_date": "2014-10-07",
+      "genre_ids": [
+        18,
+        10765
+      ],
+      "id": 60735,
+      "name": "The Flash",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Flash",
+      "overview": "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash.",
+      "popularity": 1575.343,
+      "poster_path": "/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg",
+      "vote_average": 7.7,
+      "vote_count": 7869
+    },
+    {
+      "backdrop_path": "/xpba0Dxz3sxV3QgYLR8UIe1LAAX.jpg",
+      "first_air_date": "2021-06-04",
+      "genre_ids": [
+        18,
+        10765
+      ],
+      "id": 103768,
+      "name": "Sweet Tooth",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Sweet Tooth",
+      "overview": "On a perilous adventure across a post-apocalyptic world, a lovable boy who's half-human and half-deer searches for a new beginning with a gruff protector.",
+      "popularity": 861.919,
+      "poster_path": "/rgMfhcrVZjuy5b7Pn0KzCRCEnMX.jpg",
+      "vote_average": 8,
+      "vote_count": 433
+    },
+    {
+      "backdrop_path": "/iDbIEpCM9nhoayUDTwqFL1iVwzb.jpg",
+      "first_air_date": "2017-09-25",
+      "genre_ids": [
+        18
+      ],
+      "id": 71712,
+      "name": "The Good Doctor",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Good Doctor",
+      "overview": "A young surgeon with Savant syndrome is recruited into the surgical unit of a prestigious hospital. The question will arise: can a person who doesn't have the ability to relate to people actually save their lives",
+      "popularity": 877.343,
+      "poster_path": "/6tfT03sGp9k4c0J3dypjrI8TSAI.jpg",
+      "vote_average": 8.6,
+      "vote_count": 8681
+    },
+    {
+      "backdrop_path": "/b0WmHGc8LHTdGCVzxRb3IBMur57.jpg",
+      "first_air_date": "2021-03-19",
+      "genre_ids": [
+        10765,
+        10759,
+        18,
+        10768
+      ],
+      "id": 88396,
+      "name": "The Falcon and the Winter Soldier",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Falcon and the Winter Soldier",
+      "overview": "Following the events of “Avengers: Endgame”, the Falcon, Sam Wilson and the Winter Soldier, Bucky Barnes team up in a global adventure that tests their abilities, and their patience.",
+      "popularity": 753.943,
+      "poster_path": "/6kbAMLteGO8yyewYau6bJ683sw7.jpg",
+      "vote_average": 7.8,
+      "vote_count": 5958
+    },
+    {
+      "backdrop_path": "/lucFMV4qxvpsti5xnN6paUxCbAn.jpg",
+      "first_air_date": "2021-06-17",
+      "genre_ids": [
+        18
+      ],
+      "id": 126525,
+      "name": "Elite Short Stories: Carla Samuel",
+      "origin_country": [],
+      "original_language": "es",
+      "original_name": "Elite Histórias Breves: Carla Samuel",
+      "overview": "Samuel attempts a big, romantic gesture at the airport in order to persuade Carla not to board her flight to London.",
+      "popularity": 1057.837,
+      "poster_path": "/onPkMMtzcJs9A6vKljNBa3ujI8g.jpg",
+      "vote_average": 8,
+      "vote_count": 110
+    },
+    {
+      "backdrop_path": "/wu444tM9YBllq9UcBv5TeidO3j3.jpg",
+      "first_air_date": "2020-01-31",
+      "genre_ids": [
+        18,
+        10765,
+        9648
+      ],
+      "id": 91557,
+      "name": "Ragnarok",
+      "origin_country": [
+        "NO"
+      ],
+      "original_language": "no",
+      "original_name": "Ragnarok",
+      "overview": "A small Norwegian town experiencing warm winters and violent downpours seems to be headed for another Ragnarök -- unless someone intervenes in time.",
+      "popularity": 641.087,
+      "poster_path": "/xUtOM1QO4r8w8yeE00QvBdq58N5.jpg",
+      "vote_average": 8.1,
+      "vote_count": 485
+    },
+    {
+      "backdrop_path": "/edmk8xjGBsYVIf4QtLY9WMaMcXZ.jpg",
+      "first_air_date": "2005-03-27",
+      "genre_ids": [
+        18
+      ],
+      "id": 1416,
+      "name": "Grey's Anatomy",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Grey's Anatomy",
+      "overview": "Follows the personal and professional lives of a group of doctors at Seattle’s Grey Sloan Memorial Hospital.",
+      "popularity": 756.203,
+      "poster_path": "/clnyhPqj1SNgpAdeSS6a6fwE6Bo.jpg",
+      "vote_average": 8.2,
+      "vote_count": 6285
+    },
+    {
+      "backdrop_path": "/3IPmnpvYHWspBbSG4ERp45yWdQ4.jpg",
+      "first_air_date": "2021-06-15",
+      "genre_ids": [
+        18
+      ],
+      "id": 126526,
+      "name": "Elite Short Stories: Nadia Guzmán",
+      "origin_country": [],
+      "original_language": "es",
+      "original_name": "Elite Histórias Breves: Nadia Guzmán",
+      "overview": "Nadia feels conflicted about whether or not to see her long distance boyfriend, Guzmán, when she returns to Spain for her sister's wedding.",
+      "popularity": 704.595,
+      "poster_path": "/13sJatLgtKD1szNsP8EyxK9u8eu.jpg",
+      "vote_average": 7.9,
+      "vote_count": 81
+    },
+    {
+      "backdrop_path": "/pPKiIJEEcV0E1hpVcWRXyp73ZpX.jpg",
+      "first_air_date": "2021-02-23",
+      "genre_ids": [
+        10765,
+        10759,
+        18
+      ],
+      "id": 95057,
+      "name": "Superman & Lois",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Superman & Lois",
+      "overview": "After years of facing megalomaniacal supervillains, monsters wreaking havoc on Metropolis, and alien invaders intent on wiping out the human race, The Man of Steel aka Clark Kent and Lois Lane come face to face with one of their greatest challenges ever: dealing with all the stress, pressures and complexities that come with being working parents in today's society.",
+      "popularity": 943.162,
+      "poster_path": "/vlv1gn98GqMnKHLSh0dNciqGfBl.jpg",
+      "vote_average": 8.3,
+      "vote_count": 986
+    },
+    {
+      "backdrop_path": "/6LfVuZBiOOCtqch5Ukspjb9y0EB.jpg",
+      "first_air_date": "2013-12-02",
+      "genre_ids": [
+        16,
+        35,
+        10765,
+        10759
+      ],
+      "id": 60625,
+      "name": "Rick and Morty",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Rick and Morty",
+      "overview": "Rick is a mentally-unbalanced but scientifically-gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
+      "popularity": 821.017,
+      "poster_path": "/8kOWDBK6XlPUzckuHDo3wwVRFwt.jpg",
+      "vote_average": 8.8,
+      "vote_count": 4440
+    },
+    {
+      "backdrop_path": "/ro2nKGja5KHPNFxvmI2QsEU9Y4E.jpg",
+      "first_air_date": "2021-01-08",
+      "genre_ids": [
+        80,
+        18,
+        9648
+      ],
+      "id": 96677,
+      "name": "Lupin",
+      "origin_country": [
+        "FR"
+      ],
+      "original_language": "fr",
+      "original_name": "Lupin",
+      "overview": "Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.",
+      "popularity": 524.09,
+      "poster_path": "/sgxawbFB5Vi5OkPWQLNfl3dvkNJ.jpg",
+      "vote_average": 7.9,
+      "vote_count": 971
+    },
+    {
+      "backdrop_path": "/qZtAf4Z1lazGQoYVXiHOrvLr5lI.jpg",
+      "first_air_date": "2017-01-26",
+      "genre_ids": [
+        9648,
+        18,
+        80
+      ],
+      "id": 69050,
+      "name": "Riverdale",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Riverdale",
+      "overview": "Set in the present, the series offers a bold, subversive take on Archie, Betty, Veronica and their friends, exploring the surreality of small-town life, the darkness and weirdness bubbling beneath Riverdale’s wholesome facade.",
+      "popularity": 563.037,
+      "poster_path": "/wRbjVBdDo5qHAEOVYoMWpM58FSA.jpg",
+      "vote_average": 8.6,
+      "vote_count": 11470
+    },
+    {
+      "backdrop_path": "/rFLF2QTZL37Yjdc6kmV0PbrYz3w.jpg",
+      "first_air_date": "2021-01-15",
+      "genre_ids": [
+        10765,
+        9648,
+        18
+      ],
+      "id": 85271,
+      "name": "WandaVision",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "WandaVision",
+      "overview": "Wanda Maximoff and Vision—two super-powered beings living idealized suburban lives—begin to suspect that everything is not as it seems.",
+      "popularity": 452.741,
+      "poster_path": "/glKDfE6btIRcVB5zrjspRIs4r52.jpg",
+      "vote_average": 8.4,
+      "vote_count": 8700
+    },
+    {
+      "backdrop_path": "/6UH52Fmau8RPsMAbQbjwN3wJSCj.jpg",
+      "first_air_date": "2021-03-26",
+      "genre_ids": [
+        10765,
+        16,
+        10759,
+        18
+      ],
+      "id": 95557,
+      "name": "Invincible",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Invincible",
+      "overview": "Mark Grayson is a normal teenager except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father’s tutelage.",
+      "popularity": 432.86,
+      "poster_path": "/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
+      "vote_average": 8.9,
+      "vote_count": 2142
+    },
+    {
+      "backdrop_path": "/suopoADq0k8YZr4dQXcU6pToj6s.jpg",
+      "first_air_date": "2011-04-17",
+      "genre_ids": [
+        10765,
+        18,
+        10759
+      ],
+      "id": 1399,
+      "name": "Game of Thrones",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Game of Thrones",
+      "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+      "popularity": 470.44,
+      "poster_path": "/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+      "vote_average": 8.4,
+      "vote_count": 14809
+    },
+    {
+      "backdrop_path": "/fRYwdeNjMqC30EhofPx5PlDpdun.jpg",
+      "first_air_date": "2018-10-25",
+      "genre_ids": [
+        10765,
+        18
+      ],
+      "id": 79460,
+      "name": "Legacies",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Legacies",
+      "overview": "In a place where young witches, vampires, and werewolves are nurtured to be their best selves in spite of their worst impulses, Klaus Mikaelson’s daughter, 17-year-old Hope Mikaelson, Alaric Saltzman’s twins, Lizzie and Josie Saltzman, among others, come of age into heroes and villains at The Salvatore School for the Young and Gifted.",
+      "popularity": 465.828,
+      "poster_path": "/qTZIgXrBKURBK1KrsT7fe3qwtl9.jpg",
+      "vote_average": 8.6,
+      "vote_count": 1980
+    },
+    {
+      "backdrop_path": "/pnyT1foDmmXTsho2DfxN2ePI8ix.jpg",
+      "first_air_date": "2018-06-12",
+      "genre_ids": [
+        18
+      ],
+      "id": 80240,
+      "name": "The Queen of Flow",
+      "origin_country": [
+        "CO"
+      ],
+      "original_language": "es",
+      "original_name": "La Reina del Flow",
+      "overview": "After spending seventeen years in prison unfairly, a talented songwriter seeks revenge on the men who sank her and killed her family.",
+      "popularity": 475.403,
+      "poster_path": "/fuVuDYrs8sxvEolnYr0wCSvtyTi.jpg",
+      "vote_average": 8,
+      "vote_count": 857
+    }
+  ],
+  "total_pages": 500,
+  "total_results": 10000
+}

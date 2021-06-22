@@ -1,5 +1,6 @@
 package source.remote.network
 
+import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -15,10 +16,15 @@ import source.remote.response.tv.TvResponsePopular
 
 class ApiClient {
     companion object {
-        private val retrofit = Retrofit.Builder()
+        private val okHttpClient = OkHttpClient.Builder()
+
+        private val builder = Retrofit.Builder()
                 .baseUrl("https://api.themoviedb.org/3/")
                 .addConverterFactory(GsonConverterFactory.create())
-                .build()
+                .client(okHttpClient.build())
+
+        private val retrofit = builder.build()
+
         val service by lazy {
             val create: ApiService = retrofit.create(ApiService::class.java)
             create
@@ -34,7 +40,7 @@ interface ApiService {
     ): Call<MovieResponsePopular>
 
     @GET("movie/{movie_id}")
-    suspend fun getDetailMovie(@Path("movie_id") movie_id: Int, @Query("api_key") apiKey: String): Call<MovieDetailResponse>
+     fun getDetailMovie(@Path("movie_id") movie_id: Int, @Query("api_key") apiKey: String): Call<MovieDetailResponse>
 
     @GET("tv/popular")
     @Headers("Authorization: token 0f39d26119b683bda02291ee16a9a348")

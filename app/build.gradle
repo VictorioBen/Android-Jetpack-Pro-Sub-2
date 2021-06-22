@@ -50,7 +50,8 @@ ext {
     recyclerViewVersion = '1.1.0'
     glideVersion = '4.11.0'
     archLifecycleVersion = '2.2.0'
-
+    kodein_version = '6.4.0'
+    koin_version = '2.2.2'
 }
 
 dependencies {
@@ -101,16 +102,31 @@ dependencies {
     // Coroutine Lifecycle Scopes
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
-
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
     // Navigation Component
     implementation 'androidx.navigation:navigation-fragment-ktx:2.2.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
 
     // Room components
-    def room_version = "2.2.5"
     implementation "androidx.room:room-runtime:2.2.5"
     implementation "androidx.room:room-ktx:2.2.5"
     androidTestImplementation "androidx.room:room-testing:2.2.5"
+
+    //logging
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.1"
+
+    //log
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    // Kodein
+    implementation "org.kodein.di:kodein-di-generic-jvm:$kodein_version"
+    implementation "org.kodein.di:kodein-di-framework-android-x:$kodein_version"
+
+    //Koin
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    androidTestImplementation "org.koin:koin-test:$koin_version"
 
 
 
