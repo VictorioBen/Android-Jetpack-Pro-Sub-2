@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Victorio_jetpackpro">
-        <activity android:name="ui.detail.tv.DetailTvActivity"
+        <activity android:name="ui.tv.detail.DetailTvActivity"
             android:label="Detail TvShow"
             android:parentActivityName="ui.home.HomeActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
         <activity
-            android:name="ui.detail.movies.DetailMovieActivity"
+            android:name="ui.movies.detail.DetailMovieActivity"
             android:label="@string/title_activity_detail_movie"
             android:parentActivityName="ui.home.HomeActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />

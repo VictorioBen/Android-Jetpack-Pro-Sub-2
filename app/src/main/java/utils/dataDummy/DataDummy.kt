@@ -1,7 +1,7 @@
 package utils.dataDummy
 
 import com.submission.victorio_jetpackpro.R
-import data.tv.TvShowEntity
+
 
 
 object DataDummy {
@@ -183,179 +183,179 @@ object DataDummy {
 //        return movies
 //    }
 
-    fun generateDummyTvShow(): List<TvShowEntity> {
-        val tvShow = ArrayList<TvShowEntity>()
-
-        tvShow.add(
-                TvShowEntity(
-                        "202111",
-                        "Dragon Ball Z",
-                        "Akira Toriyama",
-                        R.drawable.poster_eleven,
-                        "TV-PG",
-                        "Animation, Sci-fi & Fantasy",
-                        "26m",
-                        "82",
-                        "Tv Show",
-                        "1989",
-                        "Five years have passed since the fight with Piccolo Jr., and Goku now has a son, Gohan. The peace is interrupted when an alien named Raditz arrives on Earth in a spacecraft and tracks down Goku, revealing to him that that they are members of a near-extinct warrior race called the Saiyans."
-
-                )
-
-        )
-
-        tvShow.add(
-                TvShowEntity(
-                        "202112",
-                        "Fairy Tail: Dragon Cry",
-                        "Tatsuma Minamikawa",
-                        R.drawable.poster_twelve,
-                        "TV-15",
-                        "Aksi, Komedi, Fantasi, Animasi",
-                        "1H25M",
-                        "65",
-                        "Tv Show",
-                        "06/05/2017",
-                        "Natsu Dragneel and his friends travel to the island Kingdom of Stella, where they will reveal dark secrets, fight the new enemies and once again save the world from destruction."
-
-                )
-        )
-
-        tvShow.add(
-                TvShowEntity(
-                        "202113",
-                        "Naruto Shippuden the Movie",
-                        "Hajime Kamegaki",
-                        R.drawable.poster_thirteen,
-                        "TV-12",
-                        "Aksi, Petualangan, Animasi",
-                        "1H34M",
-                        "90",
-                        "Tv Show",
-                        "04/08/2007",
-                        "Demons that once almost destroyed the world, are revived by someone. To prevent the world from being destroyed, the demon has to be sealed and the only one who can do it is the shrine maiden Shion from the country of demons, who has two powers; one is sealing demons and the other is predicting the deaths of humans. This time Naruto's mission is to guard Shion, but she predicts Naruto's death. The only way to escape it, is to get away from Shion, which would leave her unguarded, then the demon, whose only goal is to kill Shion will do so, thus meaning the end of the world. Naruto decides to challenge this."
-
-                )
-        )
-
-        tvShow.add(
-                TvShowEntity(
-                        "202114",
-                        "The Simpsons Movie",
-                        "David Silverman",
-                        R.drawable.poster_fourteen,
-                        "TV-14",
-                        "Animasi, Komedi, Keluarga",
-                        "1H27M",
-                        "70",
-                        "Tv Show",
-                        "27/07/2007",
-                        "After Homer accidentally pollutes the town's water supply, Springfield is encased in a gigantic dome by the EPA and the Simpsons are declared fugitives."
-
-                )
-        )
-
-        tvShow.add(
-                TvShowEntity(
-                        "202115",
-                        "The Walking Dead",
-                        "Constantine Nasr",
-                        R.drawable.poster_fiveteen,
-                        "TV-14",
-                        "Zombie",
-                        "30M",
-                        "80",
-                        "Tv Show",
-                        "31/07/2010",
-                        "The Making of the TV Series The Walking Dead."
-                )
-        )
-
-        tvShow.add(
-                TvShowEntity(
-                        "202116",
-                        "Gotham",
-                        "Bruno Heller",
-                        R.drawable.poster_sixteen,
-                        "TV-13",
-                        "Drama, Kejahatan, Sci-fi & Fantasy",
-                        "43M",
-                        "75",
-                        "Tv Show",
-                        "2014",
-                        "Semua orang tahu nama Komisaris Gordon. Dia adalah salah satu musuh terbesar dunia kejahatan, seorang pria yang reputasinya identik dengan hukum dan ketertiban. Tapi apa yang diketahui tentang kisah Gordon dan kenaikannya dari detektif pemula ke Komisaris Polisi? Apa yang diperlukan untuk menavigasi berbagai lapisan korupsi yang diam-diam memerintah Kota Gotham, tempat bertelurnya penjahat paling ikonik di dunia? Dan keadaan apa yang menciptakan mereka - persona yang lebih besar dari kehidupan yang akan menjadi Catwoman, The Penguin, The Riddler, Two-Face dan The Joker?"
-
-                )
-        )
-
-        tvShow.add(
-                TvShowEntity(
-                        "202117",
-                        "Hanna",
-                        "David Yates",
-                        R.drawable.poster_seventeen,
-                        "TV-MA",
-                        "Aksi & Petualangan, Drama",
-                        "50M",
-                        "75",
-                        "Tv Show",
-                        "2019",
-                        "This thriller and coming-of-age drama follows the journey of an extraordinary young girl as she evades the relentless pursuit of an off-book CIA agent and tries to unearth the truth behind who she is. Based on the 2011 Joe Wright film."
-
-                )
-        )
-
-        tvShow.add(
-                TvShowEntity(
-                        "202118",
-                        "The Arrow",
-                        "Greg Berlanti",
-                        R.drawable.poster_eighteen,
-                        "TV-13",
-                        "Crime, Drama, Mystery",
-                        "42M",
-                        "66",
-                        "Tv Show",
-                        "2012",
-                        "Panah adalah menceritakan kembali petualangan dari legendaris DC pahlawan Green Arrow"
-
-                )
-        )
-
-        tvShow.add(
-                TvShowEntity(
-                        "202119",
-                        "Riverdale",
-                        "Roberto Aguirre-Sacasa",
-                        R.drawable.poster_nineteen,
-                        "TV-14",
-                        "Misteri, Drama, Kejahatan",
-                        "45M",
-                        "86",
-                        "Tv Show",
-                        "2017",
-                        "Set in the present, the series offers a bold, subversive take on Archie, Betty, Veronica and their friends, exploring the surreality of small-town life, the darkness and weirdness bubbling beneath Riverdale’s wholesome facade."
-
-                )
-        )
-
-        tvShow.add(
-                TvShowEntity(
-                        "202120",
-                        "Doom Patrol",
-                        "Jeremy Carver",
-                        R.drawable.poster_twenty,
-                        "TV-MA",
-                        "Sci-fi & Fantasy, Komedi, Drama",
-                        "49M",
-                        "76",
-                        "Tv Show",
-                        "2019",
-                        "The Doom Patrol’s members each suffered horrible accidents that gave them superhuman abilities — but also left them scarred and disfigured. Traumatized and downtrodden, the team found purpose through The Chief, who brought them together to investigate the weirdest phenomena in existence — and to protect Earth from what they find."
-
-                )
-        )
-
-        return tvShow
-    }
+//    fun generateDummyTvShow(): List<TvShowEntity> {
+//        val tvShow = ArrayList<TvShowEntity>()
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202111",
+//                        "Dragon Ball Z",
+//                        "Akira Toriyama",
+//                        R.drawable.poster_eleven,
+//                        "TV-PG",
+//                        "Animation, Sci-fi & Fantasy",
+//                        "26m",
+//                        "82",
+//                        "Tv Show",
+//                        "1989",
+//                        "Five years have passed since the fight with Piccolo Jr., and Goku now has a son, Gohan. The peace is interrupted when an alien named Raditz arrives on Earth in a spacecraft and tracks down Goku, revealing to him that that they are members of a near-extinct warrior race called the Saiyans."
+//
+//                )
+//
+//        )
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202112",
+//                        "Fairy Tail: Dragon Cry",
+//                        "Tatsuma Minamikawa",
+//                        R.drawable.poster_twelve,
+//                        "TV-15",
+//                        "Aksi, Komedi, Fantasi, Animasi",
+//                        "1H25M",
+//                        "65",
+//                        "Tv Show",
+//                        "06/05/2017",
+//                        "Natsu Dragneel and his friends travel to the island Kingdom of Stella, where they will reveal dark secrets, fight the new enemies and once again save the world from destruction."
+//
+//                )
+//        )
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202113",
+//                        "Naruto Shippuden the Movie",
+//                        "Hajime Kamegaki",
+//                        R.drawable.poster_thirteen,
+//                        "TV-12",
+//                        "Aksi, Petualangan, Animasi",
+//                        "1H34M",
+//                        "90",
+//                        "Tv Show",
+//                        "04/08/2007",
+//                        "Demons that once almost destroyed the world, are revived by someone. To prevent the world from being destroyed, the demon has to be sealed and the only one who can do it is the shrine maiden Shion from the country of demons, who has two powers; one is sealing demons and the other is predicting the deaths of humans. This time Naruto's mission is to guard Shion, but she predicts Naruto's death. The only way to escape it, is to get away from Shion, which would leave her unguarded, then the demon, whose only goal is to kill Shion will do so, thus meaning the end of the world. Naruto decides to challenge this."
+//
+//                )
+//        )
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202114",
+//                        "The Simpsons Movie",
+//                        "David Silverman",
+//                        R.drawable.poster_fourteen,
+//                        "TV-14",
+//                        "Animasi, Komedi, Keluarga",
+//                        "1H27M",
+//                        "70",
+//                        "Tv Show",
+//                        "27/07/2007",
+//                        "After Homer accidentally pollutes the town's water supply, Springfield is encased in a gigantic dome by the EPA and the Simpsons are declared fugitives."
+//
+//                )
+//        )
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202115",
+//                        "The Walking Dead",
+//                        "Constantine Nasr",
+//                        R.drawable.poster_fiveteen,
+//                        "TV-14",
+//                        "Zombie",
+//                        "30M",
+//                        "80",
+//                        "Tv Show",
+//                        "31/07/2010",
+//                        "The Making of the TV Series The Walking Dead."
+//                )
+//        )
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202116",
+//                        "Gotham",
+//                        "Bruno Heller",
+//                        R.drawable.poster_sixteen,
+//                        "TV-13",
+//                        "Drama, Kejahatan, Sci-fi & Fantasy",
+//                        "43M",
+//                        "75",
+//                        "Tv Show",
+//                        "2014",
+//                        "Semua orang tahu nama Komisaris Gordon. Dia adalah salah satu musuh terbesar dunia kejahatan, seorang pria yang reputasinya identik dengan hukum dan ketertiban. Tapi apa yang diketahui tentang kisah Gordon dan kenaikannya dari detektif pemula ke Komisaris Polisi? Apa yang diperlukan untuk menavigasi berbagai lapisan korupsi yang diam-diam memerintah Kota Gotham, tempat bertelurnya penjahat paling ikonik di dunia? Dan keadaan apa yang menciptakan mereka - persona yang lebih besar dari kehidupan yang akan menjadi Catwoman, The Penguin, The Riddler, Two-Face dan The Joker?"
+//
+//                )
+//        )
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202117",
+//                        "Hanna",
+//                        "David Yates",
+//                        R.drawable.poster_seventeen,
+//                        "TV-MA",
+//                        "Aksi & Petualangan, Drama",
+//                        "50M",
+//                        "75",
+//                        "Tv Show",
+//                        "2019",
+//                        "This thriller and coming-of-age drama follows the journey of an extraordinary young girl as she evades the relentless pursuit of an off-book CIA agent and tries to unearth the truth behind who she is. Based on the 2011 Joe Wright film."
+//
+//                )
+//        )
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202118",
+//                        "The Arrow",
+//                        "Greg Berlanti",
+//                        R.drawable.poster_eighteen,
+//                        "TV-13",
+//                        "Crime, Drama, Mystery",
+//                        "42M",
+//                        "66",
+//                        "Tv Show",
+//                        "2012",
+//                        "Panah adalah menceritakan kembali petualangan dari legendaris DC pahlawan Green Arrow"
+//
+//                )
+//        )
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202119",
+//                        "Riverdale",
+//                        "Roberto Aguirre-Sacasa",
+//                        R.drawable.poster_nineteen,
+//                        "TV-14",
+//                        "Misteri, Drama, Kejahatan",
+//                        "45M",
+//                        "86",
+//                        "Tv Show",
+//                        "2017",
+//                        "Set in the present, the series offers a bold, subversive take on Archie, Betty, Veronica and their friends, exploring the surreality of small-town life, the darkness and weirdness bubbling beneath Riverdale’s wholesome facade."
+//
+//                )
+//        )
+//
+//        tvShow.add(
+//                TvShowEntity(
+//                        "202120",
+//                        "Doom Patrol",
+//                        "Jeremy Carver",
+//                        R.drawable.poster_twenty,
+//                        "TV-MA",
+//                        "Sci-fi & Fantasy, Komedi, Drama",
+//                        "49M",
+//                        "76",
+//                        "Tv Show",
+//                        "2019",
+//                        "The Doom Patrol’s members each suffered horrible accidents that gave them superhuman abilities — but also left them scarred and disfigured. Traumatized and downtrodden, the team found purpose through The Chief, who brought them together to investigate the weirdest phenomena in existence — and to protect Earth from what they find."
+//
+//                )
+//        )
+//
+//        return tvShow
+//    }
 }

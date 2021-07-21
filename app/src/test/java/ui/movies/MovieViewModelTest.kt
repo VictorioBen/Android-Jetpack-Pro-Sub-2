@@ -1,24 +1,13 @@
 package ui.movies
 
-import org.junit.Test
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
+import repository.FakeRepository
+import source.remote.response.movie.ResultItem
 
-import org.junit.Assert.*
-import org.junit.Before
+class MovieViewModelTest(private val movieRepository: FakeRepository) : ViewModel() {
 
-class MovieViewModelTest {
-    private lateinit var viewModel: MovieViewModel
-
-
-    @Before
-    fun setUp(){
-        viewModel =  MovieViewModel()
-    }
+    fun getMoviePopular(): LiveData<List<ResultItem>> = movieRepository.getPopularMovie()
 
 
-    @Test
-    fun getMovie() {
-        val movieEntity = viewModel.getMovie()
-        assertNotNull(movieEntity)
-        assertEquals(10, movieEntity.size)
-    }
 }

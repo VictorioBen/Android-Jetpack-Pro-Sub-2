@@ -1,10 +1,10 @@
-package source.remote.repository.movie
+package repository
 
 import androidx.lifecycle.LiveData
 import source.remote.response.movie.MovieDetailResponse
 import source.remote.response.movie.ResultItem
 
-interface MovieDataSource {
+interface FakeMovieDataSource {
 
     fun getPopularMovie(): LiveData<List<ResultItem>>
 

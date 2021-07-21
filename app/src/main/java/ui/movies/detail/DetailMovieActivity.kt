@@ -1,26 +1,23 @@
-package ui.detail.movies
+package ui.movies.detail
 
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.observe
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.submission.victorio_jetpackpro.R
-import source.remote.response.movie.MovieDetailResponse
-import source.remote.response.movie.ResultItem
+import source.entity.MovieResultEntity
+import source.entity.movie.MovieDetailEntity
 import ui.movies.ViewModelFactory
 
 class DetailMovieActivity : AppCompatActivity() {
     private lateinit var path: String
-    private lateinit var voteAverage: String
-    private lateinit var releaseDate: String
     private lateinit var viewModel: DetailMovieViewModel
 
     companion object {
@@ -37,29 +34,26 @@ class DetailMovieActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val progressBar = findViewById<ProgressBar>(R.id.progress_bar2)
+        val progressBar = findViewById<ProgressBar>(R.id.mv_dt_progress_bar)
         val movieDetailLayout = findViewById<ConstraintLayout>(R.id.movieDetailLayout)
 
-        val factory = ViewModelFactory.getInstance(this)
+        val factory = ViewModelFactory.getInstance()
         viewModel = ViewModelProvider(this, factory)[DetailMovieViewModel::class.java]
-        val detailMovie = intent.getParcelableExtra<ResultItem>(EXTRA_MOVIE)
+        val detailMovie = intent.getParcelableExtra<MovieResultEntity>(EXTRA_MOVIE)
         val movie = detailMovie?.id!!.toInt()
         path = detailMovie.posterPath.toString()
-        voteAverage = detailMovie.voteAverage.toString()
-        releaseDate = detailMovie.releaseDate.toString()
 
-        viewModel.getDetail(movie, API_KEY).observe(this) {
+
+        viewModel.getDetail(movie, API_KEY).observe(this, Observer {
+            initMovie(it)
             progressBar.visibility = View.GONE
             movieDetailLayout.visibility = View.VISIBLE
-            initMovie(it)
-
-        }
+        })
     }
 
-
-    private fun initMovie(movieID: MovieDetailResponse?) {
+    private fun initMovie(movieID: MovieDetailEntity?) {
         val txtTitle = findViewById<TextView>(R.id.txtTitleDetail)
-        val txtGenre = findViewById<TextView>(R.id.txtGenreDetail)
+        val txtTagline = findViewById<TextView>(R.id.txtGenreDetail)
         val txtDuration = findViewById<TextView>(R.id.txtDurationDetail)
         val txtRelease = findViewById<TextView>(R.id.txtRelease)
         val txtStatus = findViewById<TextView>(R.id.txtStatus)
@@ -67,15 +61,40 @@ class DetailMovieActivity : AppCompatActivity() {
         val txtSynopsis = findViewById<TextView>(R.id.txtSynopsisDetail)
         val txtRating = findViewById<TextView>(R.id.txtRateDetail2)
 
-
         txtTitle.text = movieID?.title
-        txtGenre.text = movieID?.tagline
+        txtTagline.text = movieID?.tagline
         txtDuration.text = movieID?.runtime.toString()
-        txtRelease.text = releaseDate
+        txtRelease.text = movieID?.releaseDate.toString()
         txtStatus.text = movieID?.status
         txtSynopsis.text = movieID?.overview
-        txtRating.text = voteAverage
-        Glide.with(this).load(imageFormatter + path).apply(RequestOptions.placeholderOf(R.drawable.ic_loading).error(R.drawable.ic_error)).into(imgMovie)
+        txtRating.text = movieID?.voteAverage.toString()
+        Glide.with(this).load(imageFormatter + path).apply(
+            RequestOptions.placeholderOf(R.drawable.ic_loading).error(R.drawable.ic_error)
+        ).into(imgMovie)
+
+        when {
+            movieID?.title?.isEmpty() == true -> {
+                txtTitle.text = "-"
+            }
+            movieID?.tagline?.isEmpty() == true -> {
+                txtTagline.text = "-"
+            }
+            movieID?.runtime?.toString()?.isEmpty() == true -> {
+                txtDuration.text = "-"
+            }
+            movieID?.releaseDate?.isEmpty() == true -> {
+                txtRelease.text = "-"
+            }
+            movieID?.status?.isEmpty() == true -> {
+                txtStatus.text = "-"
+            }
+            movieID?.overview?.isEmpty() == true -> {
+                txtSynopsis.text = "-"
+            }
+            movieID?.voteAverage?.toString()?.isEmpty() == true -> {
+                txtRating.text = "-"
+            }
+        }
     }
 
 

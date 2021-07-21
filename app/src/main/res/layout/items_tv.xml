@@ -28,7 +28,7 @@
 
             <TextView
                 android:id="@+id/txtTitleTv"
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/imageTv"
                 android:text="@string/movie_1"
@@ -42,12 +42,13 @@
 
             <TextView
                 android:id="@+id/txtGenreTv"
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/imageTv"
                 android:text="@string/thriller"
-                android:textSize="16sp"
                 android:textColor="@color/White_monotone"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageTv"
                 app:layout_constraintStart_toStartOf="@+id/txtTitleTv"
                 app:layout_constraintTop_toBottomOf="@+id/txtTitleTv" />
 

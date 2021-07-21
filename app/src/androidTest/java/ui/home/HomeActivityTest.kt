@@ -21,7 +21,7 @@ import org.hamcrest.Description
 import org.hamcrest.TypeSafeMatcher
 import org.junit.Rule
 import org.junit.Test
-import ui.detail.tv.DetailTvActivity
+import ui.tv.detail.DetailTvActivity
 import utils.dataDummy.DataDummy
 
 class HomeActivityMovieTest {

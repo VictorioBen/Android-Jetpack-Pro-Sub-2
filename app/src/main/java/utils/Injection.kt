@@ -1,15 +1,21 @@
 package utils
 
-import android.content.Context
-import source.remote.RemoteDataSource
-import source.remote.repository.movie.MovieRepository
+import source.remote.RemoteDataSourceImpl
+import source.remote.repository.movie.MovieRepositoryImpl
+import source.remote.repository.tv.TvRepositoryImpl
 
 object Injection {
 
-    fun provideRepository(context: Context): MovieRepository {
+    fun provideRepository(): MovieRepositoryImpl {
 
-        val remoteDataSource = RemoteDataSource.getInstance(JsonHelper(context))
+        val remoteDataSource = RemoteDataSourceImpl.getInstance()
 
-        return MovieRepository.getInstance(remoteDataSource)
+        return MovieRepositoryImpl.getInstance(remoteDataSource)
+    }
+
+    fun provideTvRepository(): TvRepositoryImpl {
+        val remoteDataSource = RemoteDataSourceImpl.getInstance()
+
+        return TvRepositoryImpl.getInstance(remoteDataSource)
     }
 }

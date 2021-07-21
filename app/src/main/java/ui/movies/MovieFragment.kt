@@ -33,14 +33,15 @@ class MovieFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
-            val factory = ViewModelFactory.getInstance(requireActivity())
+            val factory = ViewModelFactory.getInstance()
             viewModel = ViewModelProvider(this, factory)[MovieViewModel::class.java]
             val movieAdapter = MovieAdapter()
+
             val progressBar = view.findViewById<ProgressBar>(R.id.progress_bar)
 
             viewModel.getMoviePopular().observe(viewLifecycleOwner) {
-                progressBar.visibility = View.GONE
                 movieAdapter.setMovie(it)
+                progressBar.visibility = View.GONE
                 movieAdapter.notifyDataSetChanged()
             }
 

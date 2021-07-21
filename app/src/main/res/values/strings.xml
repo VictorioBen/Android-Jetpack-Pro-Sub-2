@@ -33,7 +33,13 @@
     <string name="rate_movie">Rating Film</string>
     <string name="txt_rate_movie">82</string>
     <string name="detail">Detail</string>
-    <string name="status">status</string>
-    <string name="tagline">tagline</string>
+    <string name="status">Status</string>
+    <string name="tagline">Tagline</string>
     <string name="release">Tanggal Rilis</string>
+    <string name="tanggal_rilis">Tanggal Rilis</string>
+    <string name="season">Season</string>
+    <string name="number_season">12</string>
+    <string name="episode">Episode</string>
+    <string name="minute">110</string>
+    <string name="m">Menit</string>
 </resources>

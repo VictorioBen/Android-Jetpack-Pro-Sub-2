@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     android:orientation="vertical"
-    tools:context="ui.detail.tv.DetailTvActivity">
+    tools:context="ui.tv.detail.DetailTvActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -16,11 +16,23 @@
         app:titleTextColor="@color/Yellow"
         />
 
+    <ProgressBar
+        android:id="@+id/tv_dt_progress_bar"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tv_dt_frame"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="50dp">
@@ -38,7 +50,7 @@
                 <ImageView
                     android:id="@+id/imageTvDetail"
                     android:layout_width="170dp"
-                    android:layout_height="250dp"
+                    android:layout_height="265dp"
                     android:src="@drawable/ic_broken_image_black"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -65,15 +77,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:text="@string/genre"
+                android:layout_marginTop="2dp"
+                android:text="@string/tagline"
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView2"
                 app:layout_constraintTop_toBottomOf="@+id/txtTitleTvDetail" />
 
             <TextView
-                android:id="@+id/txtGenreTvDetail"
+                android:id="@+id/txtTagline"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
@@ -90,17 +102,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="3dp"
-                android:text="@string/duration"
+                android:text="@string/tanggal_rilis"
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView2"
-                app:layout_constraintTop_toBottomOf="@+id/txtGenreTvDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtTagline" />
 
             <TextView
-                android:id="@+id/txtDurationTvDetail"
+                android:id="@+id/txtFirstAirDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sub_duration"
+                android:text="@string/date_release"
                 android:textColor="@color/White"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView6"
@@ -112,17 +124,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="3dp"
-                android:text="@string/director_title"
+                android:text="@string/season"
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/cardView2"
-                app:layout_constraintTop_toBottomOf="@+id/txtDurationTvDetail" />
+                app:layout_constraintTop_toBottomOf="@+id/txtFirstAirDate" />
 
             <TextView
-                android:id="@+id/txtDirectorTvDetail"
+                android:id="@+id/txtSeason"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sub_director"
+                android:text="@string/number_season"
                 android:textColor="@color/White"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView8"
@@ -133,22 +145,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="@string/age"
+                android:text="@string/episode"
                 android:textColor="@color/White_monotone"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/txtDirectorTvDetail"
-                app:layout_constraintTop_toBottomOf="@+id/txtDirectorTvDetail" />
+                app:layout_constraintStart_toStartOf="@+id/txtSeason"
+                app:layout_constraintTop_toBottomOf="@+id/txtSeason" />
 
 
             <TextView
-                android:id="@+id/txtAgeTvDetail"
+                android:id="@+id/txtEpisode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tv_ma"
+                android:text="@string/number_season"
                 android:textColor="@color/White"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView10"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/txtRuntime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute"
+                android:textColor="@color/Green"
+                android:layout_marginTop="3dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/txtEpisode" />
+
+            <TextView
+                android:id="@+id/minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="2dp"
+                android:text="@string/m"
+                android:textColor="@color/Green"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/txtRuntime"
+                app:layout_constraintTop_toBottomOf="@+id/txtEpisode" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -193,8 +228,8 @@
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:text="@string/rate_movie"
+                android:layout_marginTop="10dp"
                 android:textColor="@color/White_monotone"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -217,12 +252,13 @@
                 android:id="@+id/txtRateTvDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:text="@string/txt_rate_movie"
                 android:textColor="@color/White"
                 android:textSize="45sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view2" />

@@ -1,22 +1,21 @@
 package ui.movies
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import source.remote.repository.movie.MovieRepository
-import ui.detail.movies.DetailMovieViewModel
+import source.remote.repository.movie.MovieRepositoryImpl
+import ui.movies.detail.DetailMovieViewModel
 import utils.Injection
 
-class ViewModelFactory private constructor(private val movieRepository: MovieRepository) :
+class ViewModelFactory private constructor(private val movieRepositoryImpl: MovieRepositoryImpl) :
     ViewModelProvider.NewInstanceFactory() {
 
     companion object {
         @Volatile
         private var instance: ViewModelFactory? = null
 
-        fun getInstance(context: Context): ViewModelFactory =
+        fun getInstance(): ViewModelFactory =
             instance ?: synchronized(this) {
-                instance ?: ViewModelFactory(Injection.provideRepository(context)).apply {
+                instance ?: ViewModelFactory(Injection.provideRepository()).apply {
                     instance = this
                 }
             }
@@ -26,10 +25,10 @@ class ViewModelFactory private constructor(private val movieRepository: MovieRep
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
             modelClass.isAssignableFrom(MovieViewModel::class.java) -> {
-                MovieViewModel(movieRepository) as T
+                MovieViewModel(movieRepositoryImpl) as T
             }
             modelClass.isAssignableFrom(DetailMovieViewModel::class.java) -> {
-                DetailMovieViewModel(movieRepository) as T
+                DetailMovieViewModel(movieRepositoryImpl) as T
             }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }

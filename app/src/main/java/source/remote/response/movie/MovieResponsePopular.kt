@@ -14,7 +14,7 @@ data class MovieResponsePopular(
 	val totalPages: Int? = null,
 
 	@field:SerializedName("results")
-	val results: List<ResultItem?>? = null,
+	val results: List<MovieResultItem?>? = null,
 
 	@field:SerializedName("total_results")
 	val totalResults: Int? = null
@@ -23,7 +23,7 @@ data class MovieResponsePopular(
 ) : Parcelable
 
 @Parcelize
-data class ResultItem(
+data class MovieResultItem(
 
 	@field:SerializedName("id")
 	val id: Int? = null,
