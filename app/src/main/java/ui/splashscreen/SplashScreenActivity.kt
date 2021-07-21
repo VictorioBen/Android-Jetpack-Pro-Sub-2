@@ -1,4 +1,4 @@
-package ui.SplashScreen
+package ui.splashscreen
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

@@ -1,7 +1,5 @@
 package source.entity.tv
 
-import com.google.gson.annotations.SerializedName
-
 data class TvDetailEntity(
     val id: Int? = null,
     val originalName: String? = null,

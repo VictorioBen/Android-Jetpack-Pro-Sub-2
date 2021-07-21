@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.submission.victorio_jetpackpro.R
-import source.entity.MovieResultEntity
+import source.entity.movie.MovieResultEntity
 import ui.movies.detail.DetailMovieActivity
 
 class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {

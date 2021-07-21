@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
-import source.entity.MovieResultEntity
+import source.entity.movie.MovieResultEntity
 import source.entity.movie.MovieDetailEntity
 import source.remote.RemoteDataSourceImpl
 import source.remote.response.movie.MovieDetailResponse

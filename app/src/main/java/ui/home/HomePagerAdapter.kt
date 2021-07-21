@@ -22,7 +22,7 @@ class HomePagerAdapter(private val mContext: Context, fm: FragmentManager) : Fra
                 else -> Fragment()
             }
 
-    override fun getPageTitle(position: Int): CharSequence? = mContext.resources.getString(TAB_TITLES[position])
+    override fun getPageTitle(position: Int): CharSequence = mContext.resources.getString(TAB_TITLES[position])
 
     override fun getCount(): Int = 2
 

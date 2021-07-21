@@ -1,15 +1,9 @@
-package source.entity
+package source.entity.movie
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
-@Parcelize
-data class MovieEntity(
-    val page: Int? = null,
-    val totalPages: Int? = null,
-    val results: List<MovieResultEntity?>? = null,
-    val totalResults: Int? = null
-) : Parcelable
+
 
 @Parcelize
 data class MovieResultEntity(

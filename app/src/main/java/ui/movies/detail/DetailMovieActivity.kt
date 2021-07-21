@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.submission.victorio_jetpackpro.R
-import source.entity.MovieResultEntity
+import source.entity.movie.MovieResultEntity
 import source.entity.movie.MovieDetailEntity
 import ui.movies.ViewModelFactory
 
