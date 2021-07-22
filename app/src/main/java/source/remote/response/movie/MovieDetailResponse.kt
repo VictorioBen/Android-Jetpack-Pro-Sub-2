@@ -30,6 +30,9 @@ data class MovieDetailResponse(
     val tagline: String? = null,
 
     @field:SerializedName("status")
-    val status: String? = null
+    val status: String? = null,
+
+    @field:SerializedName("backdrop_path")
+    val backdropPath: String? = null
 
 )

@@ -39,6 +39,7 @@ class MovieFragment : Fragment() {
 
             val progressBar = view.findViewById<ProgressBar>(R.id.progress_bar)
 
+
             viewModel.getMoviePopular().observe(viewLifecycleOwner) {
                 movieAdapter.setMovie(it)
                 progressBar.visibility = View.GONE

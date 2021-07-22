@@ -23,6 +23,6 @@
         android:layout_marginStart="3dp"
         android:layout_marginEnd="3dp"
         android:layout_marginTop="5dp"
-        tools:listitem="@layout/items_tv" />
+        tools:listitem="@layout/row_tv" />
 
 </FrameLayout>

@@ -23,6 +23,6 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="3dp"
-        tools:listitem="@layout/items_movie" />
+        tools:listitem="@layout/row_movie" />
 
 </FrameLayout>

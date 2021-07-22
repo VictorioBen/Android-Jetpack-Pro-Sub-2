@@ -35,8 +35,7 @@
     <string name="detail">Detail</string>
     <string name="status">Status</string>
     <string name="tagline">Tagline</string>
-    <string name="release">Tanggal Rilis</string>
-    <string name="tanggal_rilis">Tanggal Rilis</string>
+    <string name="release">Rilis</string>
     <string name="season">Season</string>
     <string name="number_season">12</string>
     <string name="episode">Episode</string>

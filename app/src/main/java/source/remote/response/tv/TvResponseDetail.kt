@@ -32,7 +32,15 @@ data class TvResponseDetail(
 	val overview: String? = null,
 
 	@field:SerializedName("vote_average")
-	val voteAverage: Double? = null
+	val voteAverage: Double? = null,
+
+	@field:SerializedName("poster_path")
+	val posterPath: String? = null,
+
+	@field:SerializedName("backdrop_path")
+	val backdropPath: String? = null
+
+
 
 ) : Parcelable
 

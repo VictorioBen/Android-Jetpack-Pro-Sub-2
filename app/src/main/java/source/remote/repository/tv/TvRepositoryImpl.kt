@@ -63,7 +63,9 @@ class TvRepositoryImpl(private val remoteDataSourceImpl: RemoteDataSourceImpl) :
                             tvResponseDetail.numberOfEpisodes,
                             tvResponseDetail.episodeRunTime,
                             tvResponseDetail.overview,
-                            tvResponseDetail.voteAverage
+                            tvResponseDetail.voteAverage,
+                            tvResponseDetail.posterPath,
+                            tvResponseDetail.backdropPath
                         )
                         tvDetailResult.postValue(tvDetail)
                     }

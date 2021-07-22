@@ -9,5 +9,7 @@ data class TvDetailEntity(
     val numberOfEpisodes: Int? = null,
     val episodeRunTime: List<Int?>? = null,
     val overview: String? = null,
-    val voteAverage: Double? = null
+    val voteAverage: Double? = null,
+    val posterPath: String? = null,
+    val backdropPath: String? = null
 )

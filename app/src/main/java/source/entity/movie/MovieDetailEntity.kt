@@ -1,5 +1,7 @@
 package source.entity.movie
 
+import com.google.gson.annotations.SerializedName
+
 
 data class MovieDetailEntity(
     val title: String? = null,
@@ -10,6 +12,7 @@ data class MovieDetailEntity(
     val releaseDate: String? = null,
     val voteAverage: Double? = null,
     val tagline: String? = null,
-    val status: String? = null
+    val status: String? = null,
+    val backdropPath: String? = null
 )
 

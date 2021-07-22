@@ -62,7 +62,8 @@ class MovieRepositoryImpl(private val remoteDataSourceImpl: RemoteDataSourceImpl
                         detailResponse.releaseDate,
                         detailResponse.voteAverage,
                         detailResponse.tagline,
-                        detailResponse.status
+                        detailResponse.status,
+                        detailResponse.backdropPath
                     )
 
                     detailMovie.postValue(movieDetail)

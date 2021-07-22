@@ -1,72 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="5dp"
-    app:cardBackgroundColor="@color/colorAccentTwo"
-    app:cardCornerRadius="5dp"
-    app:cardElevation="4dp"
-    >
-
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tv_dt_frame"
+            android:visibility="visible"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:paddingBottom="50dp">
 
-            <ImageView
-                android:id="@+id/imageTv"
-                android:layout_width="100dp"
-                android:layout_height="150dp"
-                android:src="@drawable/poster_one"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/txtTitleTv"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/imageTv"
-                android:text="@string/movie_1"
-                android:layout_marginStart="10dp"
-                android:textColor="@color/White"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                app:layout_constraintStart_toEndOf="@+id/imageTv"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="RelativeOverlap" />
-
-            <TextView
-                android:id="@+id/txtGenreTv"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/imageTv"
-                android:text="@string/thriller"
-                android:textColor="@color/White_monotone"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/imageTv"
-                app:layout_constraintStart_toStartOf="@+id/txtTitleTv"
-                app:layout_constraintTop_toBottomOf="@+id/txtTitleTv" />
-
-
-            <TextView
-                android:id="@+id/txtReleaseTv"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@id/imageTv"
-                android:layout_marginEnd="10dp"
-                android:textSize="16sp"
-                android:text="@string/date_release"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageTvDetail"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_broken_image_black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/txtTitleTvDetail"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title_movie_2"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/tagline"
                 android:textColor="@color/White_monotone"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitleTvDetail" />
+
+            <TextView
+                android:id="@+id/txtTagline"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginStart="40dp"
+                android:text="@string/sub_genre"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitleTvDetail"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/release"
+                android:textColor="@color/White_monotone"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toBottomOf="@+id/txtTagline" />
+
+            <TextView
+                android:id="@+id/txtFirstAirDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_release"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtTagline"
+                app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/season"
+                android:textColor="@color/White_monotone"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toBottomOf="@+id/txtFirstAirDate" />
+
+            <TextView
+                android:id="@+id/txtSeason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/number_season"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtFirstAirDate"
+                app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/episode"
+                android:textColor="@color/White_monotone"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/txtSeason" />
+
+
+            <TextView
+                android:id="@+id/txtEpisode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/number_season"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtSeason"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/txtRuntime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute"
+                android:textColor="@color/Green"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtEpisode"
+                app:layout_constraintTop_toTopOf="@+id/minutes" />
+
+            <TextView
+                android:id="@+id/minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/m"
+                android:textColor="@color/White_monotone"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/txtEpisode" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/synopsis"
+                android:textColor="@color/White_monotone"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/Yellow"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/txtSynopsisTvDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="7dp"
+                android:text="@string/txt_synopsis"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rate_movie"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/White_monotone"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSynopsisTvDetail" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/Yellow"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/textView12"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/txtRateTvDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/txt_rate_movie"
+                android:textColor="@color/White"
+                android:textSize="45sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>

@@ -26,6 +26,7 @@
     <color name="Background2">#EDEBEB</color>
     <color name="White">#FFFFFF</color>
     <color name="White_monotone">#CADBEB</color>
+    <color name="transparent">#00FFFFFF</color>
 
 
     <!--TextWelcomeColour-->

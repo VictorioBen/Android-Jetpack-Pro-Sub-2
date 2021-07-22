@@ -12,4 +12,5 @@ data class MovieResultEntity(
     val posterPath: String? = null,
     val releaseDate: String? = null,
     val voteAverage: Double? = null
+
 ) : Parcelable

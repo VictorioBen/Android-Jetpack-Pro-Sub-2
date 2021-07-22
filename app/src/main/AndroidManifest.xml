@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.submission.victorio_jetpackpro">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,19 +11,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Victorio_jetpackpro">
+        android:theme="@style/Theme.Victorio_jetpackpro"
+        tools:ignore="AllowBackup">
         <activity android:name="ui.tv.detail.DetailTvActivity"
-            android:label="Detail TvShow"
-            android:parentActivityName="ui.home.HomeActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+            android:theme="@style/AppTheme.TransparentBar" />
         <activity
             android:name="ui.movies.detail.DetailMovieActivity"
-            android:label="@string/title_activity_detail_movie"
-            android:parentActivityName="ui.home.HomeActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+            android:theme="@style/AppTheme.TransparentBar" />
         <activity
             android:name="ui.home.HomeActivity"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+            android:theme="@style/Theme.Victorio_jetpackpro.NoActionBar"
+            />
         <activity
             android:name="ui.splashscreen.SplashScreenActivity"
             android:theme="@style/Theme.MaterialComponents.NoActionBar">

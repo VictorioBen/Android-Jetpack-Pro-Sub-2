@@ -1,71 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="5dp"
-    app:cardBackgroundColor="@color/colorAccentTwo"
-    app:cardCornerRadius="5dp"
-    app:cardElevation="4dp"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     >
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/movieDetailLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:visibility="visible">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imageMovie"
+                android:id="@+id/imageMovieDetail"
+                tools:ignore="ContentDescription"
                 android:layout_width="100dp"
                 android:layout_height="150dp"
-                android:src="@drawable/poster_one"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_broken_image_black"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/txtTitle"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/imageMovie"
-                android:text="@string/movie_1"
-                android:layout_marginStart="10dp"
-                android:textColor="@color/White"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                app:layout_constraintStart_toEndOf="@+id/imageMovie"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="RelativeOverlap" />
-
-            <TextView
-                android:id="@+id/txtGenre"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/imageMovie"
-                android:text="@string/thriller"
-                android:textSize="16sp"
-                android:textColor="@color/White_monotone"
-                app:layout_constraintStart_toStartOf="@+id/txtTitle"
-                app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+        </androidx.cardview.widget.CardView>
 
 
-            <TextView
-                android:id="@+id/txtRelease"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@id/imageMovie"
-                android:layout_marginEnd="10dp"
-                android:textSize="16sp"
-                android:text="@string/date_release"
-                android:textColor="@color/White_monotone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/txtTitleDetail"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_movie_2"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/tagline"
+            android:textColor="@color/White_monotone"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleDetail" />
+
+        <TextView
+            android:id="@+id/txtGenreDetail"
+            tools:ignore="RtlHardcoded"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/sub_genre"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txtDurationDetail"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitleDetail" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="51dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/duration"
+            android:textColor="@color/White_monotone"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/txtGenreDetail" />
+
+        <TextView
+            android:id="@+id/txtDurationDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/sub_duration"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/release"
+            android:textColor="@color/White_monotone"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/txtDurationDetail" />
+
+        <TextView
+            android:id="@+id/txtRelease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_release"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txtDurationDetail"
+            app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/status"
+            android:textColor="@color/White_monotone"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/txtRelease"
+            app:layout_constraintTop_toTopOf="@+id/textView10" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/synopsis"
+            android:textColor="@color/White_monotone"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="50dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/Yellow"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/textView11"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/txtSynopsisDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="7dp"
+            android:text="@string/txt_synopsis"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/rate_movie"
+            android:textColor="@color/White_monotone"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSynopsisDetail" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="50dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/Yellow"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/textView12"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/txtRateDetail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="@string/txt_rate_movie"
+            android:textColor="@color/White"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

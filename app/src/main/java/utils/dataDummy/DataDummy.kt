@@ -1,17 +1,18 @@
 package utils.dataDummy
 
 import com.submission.victorio_jetpackpro.R
+import source.entity.movie.MovieResultEntity
+import source.entity.tv.TvResultEntity
 
 
-
-object DataDummy {
-
-//    fun generateDummyMovies(): List<MovieEntity> {
+//object DataDummy {
 //
-//        val movies = ArrayList<MovieEntity>()
+//    fun generateDummyMovies(): List<MovieResultEntity> {
+//
+//        val movies = ArrayList<MovieResultEntity>()
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202101",
 //                        "A Star Is Born",
 //                        "Bradley Cooper",
@@ -27,7 +28,7 @@ object DataDummy {
 //        )
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202102",
 //                        "Alita: Battle Angel",
 //                        "Robert Rodriguez",
@@ -44,7 +45,7 @@ object DataDummy {
 //        )
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202103",
 //                        "Aquaman",
 //                        "James Wan",
@@ -61,7 +62,7 @@ object DataDummy {
 //        )
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202104",
 //                        "Bohemian Rhapsody",
 //                        "Brayn Singer",
@@ -79,7 +80,7 @@ object DataDummy {
 //        )
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202105",
 //                        "Cold Pursuit",
 //                        "Hans Petter Moland",
@@ -96,7 +97,7 @@ object DataDummy {
 //        )
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202106",
 //                        "Creed",
 //                        "Ryan Coolger",
@@ -113,7 +114,7 @@ object DataDummy {
 //
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202107",
 //                        "The Crimes Of Grindelwald",
 //                        "David Yates",
@@ -129,7 +130,7 @@ object DataDummy {
 //        )
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202108",
 //                        "Glass",
 //                        "M. Night Shyamalan",
@@ -147,7 +148,7 @@ object DataDummy {
 //        )
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202109",
 //                        "Infinity War",
 //                        "Joe Russo",
@@ -164,7 +165,7 @@ object DataDummy {
 //        )
 //
 //        movies.add(
-//                MovieEntity(
+//            MovieResultEntity(
 //                        "202110",
 //                        "Master Z: IP Man Legacy",
 //                        "Yuen Woo-ping",
@@ -182,12 +183,12 @@ object DataDummy {
 //
 //        return movies
 //    }
-
-//    fun generateDummyTvShow(): List<TvShowEntity> {
-//        val tvShow = ArrayList<TvShowEntity>()
+//
+//    fun generateDummyTvShow(): List<TvResultEntity> {
+//        val tvShow = ArrayList<TvResultEntity>()
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202111",
 //                        "Dragon Ball Z",
 //                        "Akira Toriyama",
@@ -205,7 +206,7 @@ object DataDummy {
 //        )
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202112",
 //                        "Fairy Tail: Dragon Cry",
 //                        "Tatsuma Minamikawa",
@@ -222,7 +223,7 @@ object DataDummy {
 //        )
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202113",
 //                        "Naruto Shippuden the Movie",
 //                        "Hajime Kamegaki",
@@ -239,7 +240,7 @@ object DataDummy {
 //        )
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202114",
 //                        "The Simpsons Movie",
 //                        "David Silverman",
@@ -256,7 +257,7 @@ object DataDummy {
 //        )
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202115",
 //                        "The Walking Dead",
 //                        "Constantine Nasr",
@@ -272,7 +273,7 @@ object DataDummy {
 //        )
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202116",
 //                        "Gotham",
 //                        "Bruno Heller",
@@ -289,7 +290,7 @@ object DataDummy {
 //        )
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202117",
 //                        "Hanna",
 //                        "David Yates",
@@ -306,7 +307,7 @@ object DataDummy {
 //        )
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202118",
 //                        "The Arrow",
 //                        "Greg Berlanti",
@@ -323,7 +324,7 @@ object DataDummy {
 //        )
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202119",
 //                        "Riverdale",
 //                        "Roberto Aguirre-Sacasa",
@@ -340,7 +341,7 @@ object DataDummy {
 //        )
 //
 //        tvShow.add(
-//                TvShowEntity(
+//            TvResultEntity(
 //                        "202120",
 //                        "Doom Patrol",
 //                        "Jeremy Carver",
@@ -358,4 +359,4 @@ object DataDummy {
 //
 //        return tvShow
 //    }
-}
+//}

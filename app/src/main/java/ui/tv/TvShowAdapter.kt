@@ -38,7 +38,7 @@ class TvShowAdapter :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        view = LayoutInflater.from(parent.context).inflate(R.layout.items_movie, parent, false)
+        view = LayoutInflater.from(parent.context).inflate(R.layout.row_movie, parent, false)
         return ListViewHolder(view)
     }
 

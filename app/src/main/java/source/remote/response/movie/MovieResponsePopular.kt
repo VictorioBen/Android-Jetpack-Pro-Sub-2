@@ -41,5 +41,6 @@ data class MovieResultItem(
 	val voteAverage: Double? = null
 
 
+
 ) : Parcelable
 

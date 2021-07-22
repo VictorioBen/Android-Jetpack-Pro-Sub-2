@@ -1,5 +1,6 @@
 package ui.movies.detail
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -9,30 +10,28 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.submission.victorio_jetpackpro.R
-import source.entity.movie.MovieResultEntity
 import source.entity.movie.MovieDetailEntity
+import source.entity.movie.MovieResultEntity
 import ui.movies.ViewModelFactory
+import utils.Helper.API_KEY
+import utils.Helper.backdropPathURL
+import utils.Helper.imageFormatter
+import utils.Helper.setImageWithGlide
 
 class DetailMovieActivity : AppCompatActivity() {
-    private lateinit var path: String
+
     private lateinit var viewModel: DetailMovieViewModel
 
     companion object {
         const val EXTRA_MOVIE = "extra_movie"
-        const val API_KEY = "0f39d26119b683bda02291ee16a9a348"
-        const val imageFormatter = "https://image.tmdb.org/t/p/w500"
     }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_movie)
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val progressBar = findViewById<ProgressBar>(R.id.mv_dt_progress_bar)
         val movieDetailLayout = findViewById<ConstraintLayout>(R.id.movieDetailLayout)
@@ -41,14 +40,14 @@ class DetailMovieActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, factory)[DetailMovieViewModel::class.java]
         val detailMovie = intent.getParcelableExtra<MovieResultEntity>(EXTRA_MOVIE)
         val movie = detailMovie?.id!!.toInt()
-        path = detailMovie.posterPath.toString()
-
 
         viewModel.getDetail(movie, API_KEY).observe(this, Observer {
             initMovie(it)
             progressBar.visibility = View.GONE
             movieDetailLayout.visibility = View.VISIBLE
         })
+
+        setupToolbar(detailMovie.title.toString())
     }
 
     private fun initMovie(movieID: MovieDetailEntity?) {
@@ -60,6 +59,7 @@ class DetailMovieActivity : AppCompatActivity() {
         val imgMovie = findViewById<ImageView>(R.id.imageMovieDetail)
         val txtSynopsis = findViewById<TextView>(R.id.txtSynopsisDetail)
         val txtRating = findViewById<TextView>(R.id.txtRateDetail2)
+        val backdropPath = findViewById<ImageView>(R.id.imgMoviePreview)
 
         txtTitle.text = movieID?.title
         txtTagline.text = movieID?.tagline
@@ -68,9 +68,10 @@ class DetailMovieActivity : AppCompatActivity() {
         txtStatus.text = movieID?.status
         txtSynopsis.text = movieID?.overview
         txtRating.text = movieID?.voteAverage.toString()
-        Glide.with(this).load(imageFormatter + path).apply(
-            RequestOptions.placeholderOf(R.drawable.ic_loading).error(R.drawable.ic_error)
-        ).into(imgMovie)
+
+        setImageWithGlide(this, imageFormatter + movieID?.posterPath, imgMovie)
+
+        setImageWithGlide(this, backdropPathURL + movieID?.backdropPath, backdropPath)
 
         when {
             movieID?.title?.isEmpty() == true -> {
@@ -97,6 +98,19 @@ class DetailMovieActivity : AppCompatActivity() {
         }
     }
 
+    private fun setupToolbar(title: String) {
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = title
+        val collapsingToolbar = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
+        collapsingToolbar.setExpandedTitleColor(Color.TRANSPARENT)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return super.onSupportNavigateUp()
+    }
 
 }
 
