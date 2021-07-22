@@ -14,14 +14,13 @@
         android:layout_height="50dp"
         app:title="@string/detail"
         app:titleTextColor="@color/Yellow"
-
         />
 
     <ProgressBar
         android:id="@+id/mv_dt_progress_bar"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +32,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/movieDetailLayout"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="50dp">
