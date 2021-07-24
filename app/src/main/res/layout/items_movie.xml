@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/itemMovie"
+    android:visibility="gone"
     android:background="@color/colorPrimaryDark"
-    android:fitsSystemWindows="true"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     >
 
@@ -14,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingBottom="10dp"
-        android:visibility="visible">
+        >
 
 
         <androidx.cardview.widget.CardView
@@ -40,7 +42,7 @@
 
 
         <TextView
-            android:id="@+id/txtTitleDetail"
+            android:id="@+id/txtMvTitleDetail"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="@string/title_movie_2"
@@ -62,10 +64,10 @@
             android:textColor="@color/White_monotone"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/cardView2"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitleDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/txtMvTitleDetail" />
 
         <TextView
-            android:id="@+id/txtGenreDetail"
+            android:id="@+id/txtMvTaglineDetail"
             tools:ignore="RtlHardcoded"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
@@ -73,8 +75,8 @@
             android:text="@string/sub_genre"
             android:textColor="@color/White"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/txtDurationDetail"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitleDetail" />
+            app:layout_constraintStart_toStartOf="@+id/txtMvDurationDetail"
+            app:layout_constraintTop_toBottomOf="@+id/txtMvTitleDetail" />
 
         <TextView
             android:id="@+id/textView6"
@@ -86,10 +88,10 @@
             android:textColor="@color/White_monotone"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/cardView2"
-            app:layout_constraintTop_toBottomOf="@+id/txtGenreDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/txtMvTaglineDetail" />
 
         <TextView
-            android:id="@+id/txtDurationDetail"
+            android:id="@+id/txtMvDurationDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -109,16 +111,16 @@
             android:textColor="@color/White_monotone"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/cardView2"
-            app:layout_constraintTop_toBottomOf="@+id/txtDurationDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/txtMvDurationDetail" />
 
         <TextView
-            android:id="@+id/txtRelease"
+            android:id="@+id/txtMvRelease"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/date_release"
             android:textColor="@color/White"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/txtDurationDetail"
+            app:layout_constraintStart_toStartOf="@+id/txtMvDurationDetail"
             app:layout_constraintTop_toTopOf="@+id/textView8" />
 
         <TextView
@@ -134,13 +136,13 @@
 
 
         <TextView
-            android:id="@+id/txtStatus"
+            android:id="@+id/txtMvStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/status"
             android:textColor="@color/White"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/txtRelease"
+            app:layout_constraintStart_toStartOf="@+id/txtMvRelease"
             app:layout_constraintTop_toTopOf="@+id/textView10" />
 
         <TextView
@@ -168,7 +170,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
-            android:id="@+id/txtSynopsisDetail"
+            android:id="@+id/txtMvSynopsisDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
@@ -193,7 +195,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtSynopsisDetail" />
+            app:layout_constraintTop_toBottomOf="@+id/txtMvSynopsisDetail" />
 
         <View
             android:id="@+id/view2"
@@ -207,7 +209,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
         <TextView
-            android:id="@+id/txtRateDetail2"
+            android:id="@+id/txtMvRateDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"

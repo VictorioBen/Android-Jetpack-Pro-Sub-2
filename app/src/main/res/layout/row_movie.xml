@@ -27,7 +27,7 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/txtTitle"
+                android:id="@+id/txtMvTitle"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/imageMovie"
@@ -41,19 +41,19 @@
                 tools:ignore="RelativeOverlap" />
 
             <TextView
-                android:id="@+id/txtGenre"
+                android:id="@+id/txtMvTvRating"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/imageMovie"
-                android:text="@string/thriller"
+                android:text="@string/txt_rate_movie"
                 android:textSize="16sp"
                 android:textColor="@color/White_monotone"
-                app:layout_constraintStart_toStartOf="@+id/txtTitle"
-                app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+                app:layout_constraintStart_toStartOf="@+id/txtMvTitle"
+                app:layout_constraintTop_toBottomOf="@+id/txtMvTitle" />
 
 
             <TextView
-                android:id="@+id/txtRelease"
+                android:id="@+id/txtMvRelease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

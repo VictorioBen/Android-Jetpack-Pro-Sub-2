@@ -3,15 +3,12 @@ package ui.tv.detail
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.submission.victorio_jetpackpro.R
+import com.submission.victorio_jetpackpro.databinding.ActivityDetailTvBinding
 import source.entity.tv.TvDetailEntity
 import source.entity.tv.TvResultEntity
 import ui.tv.TvViewModelFactory
@@ -21,7 +18,7 @@ import utils.Helper.API_KEY
 class DetailTvActivity : AppCompatActivity() {
 
     private lateinit var viewModel: DetailTvViewModel
-
+    private lateinit var binding: ActivityDetailTvBinding
 
     companion object {
         const val EXTRA_TV = "extra_tv"
@@ -29,78 +26,65 @@ class DetailTvActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_tv)
-
-        val progressBar = findViewById<ProgressBar>(R.id.tv_dt_progress_bar)
-        val tvDetailLayout = findViewById<ConstraintLayout>(R.id.tv_dt_frame)
+        binding = ActivityDetailTvBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         val factory = TvViewModelFactory.getInstance()
         viewModel = ViewModelProvider(this, factory)[DetailTvViewModel::class.java]
         val detailTv = intent.getParcelableExtra<TvResultEntity>(EXTRA_TV)
         val tv = detailTv?.id!!.toInt()
 
-
-
         viewModel.getDetail(tv, API_KEY).observe(this, Observer {
             initTvShow(it)
-            progressBar.visibility = View.GONE
-            tvDetailLayout.visibility = View.VISIBLE
+            binding.tvDtProgressBar.visibility = View.GONE
+            binding.includeTv.itemTv.visibility = View.VISIBLE
         })
 
         setupToolbar(detailTv.originalName.toString())
     }
 
     private fun initTvShow(tvShowID: TvDetailEntity?) {
+        binding.includeTv.txtTitleTvDetail.text = tvShowID?.originalName
+        binding.includeTv.txtTagline.text = tvShowID?.tagline
+        binding.includeTv.txtFirstAirDate.text = tvShowID?.firstAirDate.toString()
+        binding.includeTv.txtSeason.text =  tvShowID?.numberOfSeasons.toString()
+        binding.includeTv.txtEpisode.text = tvShowID?.numberOfEpisodes.toString()
+        binding.includeTv.txtRuntime.text = tvShowID?.episodeRunTime.toString()
+        binding.includeTv.txtSynopsisTvDetail.text = tvShowID?.overview.toString()
+        binding.includeTv.txtRateTvDetail.text =  tvShowID?.voteAverage.toString()
 
-        val txtTitle = findViewById<TextView>(R.id.txtTitleTvDetail)
-        val txtTagline = findViewById<TextView>(R.id.txtTagline)
-        val txtFirstAirDate = findViewById<TextView>(R.id.txtFirstAirDate)
-        val txtSeason = findViewById<TextView>(R.id.txtSeason)
-        val txtEpisode = findViewById<TextView>(R.id.txtEpisode)
-        val txtRuntime = findViewById<TextView>(R.id.txtRuntime)
-        val imgMovie = findViewById<ImageView>(R.id.imageTvDetail)
-        val backdropPathTv = findViewById<ImageView>(R.id.imgTvPreview)
-        val txtOverview = findViewById<TextView>(R.id.txtSynopsisTvDetail)
-        val txtVoteAverage = findViewById<TextView>(R.id.txtRateTvDetail)
+        Helper.setImageWithGlide(this,
+            Helper.imageFormatter + tvShowID?.posterPath, binding.includeTv.imageTvDetail)
 
-        txtTitle.text = tvShowID?.originalName
-        txtTagline.text = tvShowID?.tagline
-        txtFirstAirDate.text = tvShowID?.firstAirDate.toString()
-        txtSeason.text = tvShowID?.numberOfSeasons.toString()
-        txtEpisode.text = tvShowID?.numberOfEpisodes.toString()
-        txtRuntime.text = tvShowID?.episodeRunTime.toString()
-        txtOverview.text = tvShowID?.overview
-        txtVoteAverage.text = tvShowID?.voteAverage.toString()
-
-        Helper.setImageWithGlide(this, Helper.imageFormatter + tvShowID?.posterPath, imgMovie)
-
-        Helper.setImageWithGlide(this, Helper.backdropPathURL + tvShowID?.backdropPath, backdropPathTv)
+        Helper.setImageWithGlide(this,
+            Helper.backdropPathURL + tvShowID?.backdropPath, binding.imgTvPreview)
 
         when {
             tvShowID?.originalName?.isEmpty() == true -> {
-                txtTitle.text = "-"
+                binding.includeTv.txtTitleTvDetail.text = "-"
             }
             tvShowID?.tagline?.isEmpty() == true -> {
-                txtTagline.text = "-"
+                binding.includeTv.txtTagline.text  = "-"
             }
             tvShowID?.firstAirDate?.isEmpty() == true -> {
-                txtFirstAirDate.text = "-"
+                binding.includeTv.txtFirstAirDate.text = "-"
             }
             tvShowID?.numberOfSeasons?.toString()?.isEmpty() == true -> {
-                txtSeason.text = "-"
+                binding.includeTv.txtSeason.text  = "-"
             }
             tvShowID?.numberOfEpisodes?.toString()?.isEmpty() == true -> {
-                txtEpisode.text = "-"
+                binding.includeTv.txtEpisode.text = "-"
             }
             tvShowID?.overview?.isEmpty() == true -> {
-                txtRuntime.text = "-"
+                binding.includeTv.txtSynopsisTvDetail.text = "-"
             }
             tvShowID?.voteAverage?.toString()?.isEmpty() == true -> {
-                txtOverview.text = "-"
+                binding.includeTv.txtRateTvDetail.text  = "-"
             }
 
             tvShowID?.episodeRunTime?.toString()?.isEmpty() == true -> {
-                txtRuntime.text = "-"
+                binding.includeTv.txtRuntime.text = "-"
             }
         }
     }

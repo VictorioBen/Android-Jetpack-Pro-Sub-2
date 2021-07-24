@@ -17,7 +17,6 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
 
-
         val viewPager = findViewById<ViewPager>(R.id.homePager)
         viewPager?.adapter = HomePagerAdapter(this,supportFragmentManager)
 

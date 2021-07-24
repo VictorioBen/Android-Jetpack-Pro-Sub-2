@@ -3,15 +3,12 @@ package ui.movies.detail
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.submission.victorio_jetpackpro.R
+import com.submission.victorio_jetpackpro.databinding.ActivityDetailMovieBinding
 import source.entity.movie.MovieDetailEntity
 import source.entity.movie.MovieResultEntity
 import ui.movies.ViewModelFactory
@@ -23,6 +20,7 @@ import utils.Helper.setImageWithGlide
 class DetailMovieActivity : AppCompatActivity() {
 
     private lateinit var viewModel: DetailMovieViewModel
+    private lateinit var binding: ActivityDetailMovieBinding
 
     companion object {
         const val EXTRA_MOVIE = "extra_movie"
@@ -31,10 +29,10 @@ class DetailMovieActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_movie)
+        binding = ActivityDetailMovieBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        val progressBar = findViewById<ProgressBar>(R.id.mv_dt_progress_bar)
-        val movieDetailLayout = findViewById<ConstraintLayout>(R.id.movieDetailLayout)
 
         val factory = ViewModelFactory.getInstance()
         viewModel = ViewModelProvider(this, factory)[DetailMovieViewModel::class.java]
@@ -43,57 +41,47 @@ class DetailMovieActivity : AppCompatActivity() {
 
         viewModel.getDetail(movie, API_KEY).observe(this, Observer {
             initMovie(it)
-            progressBar.visibility = View.GONE
-            movieDetailLayout.visibility = View.VISIBLE
+            binding.mvDtProgressBar.visibility = View.GONE
+            binding.includeMovie.itemMovie.visibility = View.VISIBLE
         })
 
         setupToolbar(detailMovie.title.toString())
     }
 
     private fun initMovie(movieID: MovieDetailEntity?) {
-        val txtTitle = findViewById<TextView>(R.id.txtTitleDetail)
-        val txtTagline = findViewById<TextView>(R.id.txtGenreDetail)
-        val txtDuration = findViewById<TextView>(R.id.txtDurationDetail)
-        val txtRelease = findViewById<TextView>(R.id.txtRelease)
-        val txtStatus = findViewById<TextView>(R.id.txtStatus)
-        val imgMovie = findViewById<ImageView>(R.id.imageMovieDetail)
-        val txtSynopsis = findViewById<TextView>(R.id.txtSynopsisDetail)
-        val txtRating = findViewById<TextView>(R.id.txtRateDetail2)
-        val backdropPath = findViewById<ImageView>(R.id.imgMoviePreview)
+        binding.includeMovie.txtMvTitleDetail.text = movieID?.title
+        binding.includeMovie.txtMvTaglineDetail.text = movieID?.tagline
+        binding.includeMovie.txtMvDurationDetail.text =  movieID?.runtime.toString()
+        binding.includeMovie.txtMvRelease.text =  movieID?.releaseDate.toString()
+        binding.includeMovie.txtMvStatus.text =  movieID?.status
+        binding.includeMovie.txtMvSynopsisDetail.text =  movieID?.overview
+        binding.includeMovie.txtMvRateDetail.text = movieID?.voteAverage.toString()
 
-        txtTitle.text = movieID?.title
-        txtTagline.text = movieID?.tagline
-        txtDuration.text = movieID?.runtime.toString()
-        txtRelease.text = movieID?.releaseDate.toString()
-        txtStatus.text = movieID?.status
-        txtSynopsis.text = movieID?.overview
-        txtRating.text = movieID?.voteAverage.toString()
+        setImageWithGlide(this, imageFormatter + movieID?.posterPath, binding.includeMovie.imageMovieDetail)
 
-        setImageWithGlide(this, imageFormatter + movieID?.posterPath, imgMovie)
-
-        setImageWithGlide(this, backdropPathURL + movieID?.backdropPath, backdropPath)
+        setImageWithGlide(this, backdropPathURL + movieID?.backdropPath, binding.imgMoviePreview)
 
         when {
             movieID?.title?.isEmpty() == true -> {
-                txtTitle.text = "-"
+                binding.includeMovie.txtMvTitleDetail.text = "-"
             }
             movieID?.tagline?.isEmpty() == true -> {
-                txtTagline.text = "-"
+                binding.includeMovie.txtMvTaglineDetail.text = "-"
             }
             movieID?.runtime?.toString()?.isEmpty() == true -> {
-                txtDuration.text = "-"
+                binding.includeMovie.txtMvDurationDetail.text = "-"
             }
             movieID?.releaseDate?.isEmpty() == true -> {
-                txtRelease.text = "-"
+                binding.includeMovie.txtMvRelease.text = "-"
             }
             movieID?.status?.isEmpty() == true -> {
-                txtStatus.text = "-"
+                binding.includeMovie.txtMvStatus.text = "-"
             }
             movieID?.overview?.isEmpty() == true -> {
-                txtSynopsis.text = "-"
+                binding.includeMovie.txtMvSynopsisDetail.text = "-"
             }
             movieID?.voteAverage?.toString()?.isEmpty() == true -> {
-                txtRating.text = "-"
+                binding.includeMovie.txtMvRateDetail.text = "-"
             }
         }
     }

@@ -31,14 +31,14 @@ class TvShowAdapter :
 
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val txtTitle: TextView = itemView.findViewById(R.id.txtTitle)
-        val txtGenre: TextView = itemView.findViewById(R.id.txtGenre)
-        val txtRelease: TextView = itemView.findViewById(R.id.txtRelease)
-        val imageMovie: ImageView = itemView.findViewById(R.id.imageMovie)
+        val txtTitle: TextView = itemView.findViewById(R.id.txtTitleTv)
+        val txtTvRating: TextView = itemView.findViewById(R.id.txtRatingTv)
+        val txtRelease: TextView = itemView.findViewById(R.id.txtReleaseTv)
+        val imageMovie: ImageView = itemView.findViewById(R.id.imageTv)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        view = LayoutInflater.from(parent.context).inflate(R.layout.row_movie, parent, false)
+        view = LayoutInflater.from(parent.context).inflate(R.layout.row_tv, parent, false)
         return ListViewHolder(view)
     }
 
@@ -50,7 +50,7 @@ class TvShowAdapter :
         val tvItem = listTv[position]
 
         holder.txtTitle.text = tvItem.originalName
-        holder.txtGenre.text = tvItem.voteAverage.toString()
+        holder.txtTvRating.text = tvItem.voteAverage.toString()
         holder.txtRelease.text = tvItem.firstAirDate.toString()
 
 

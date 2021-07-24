@@ -30,9 +30,9 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
 
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val txtTitle: TextView = itemView.findViewById(R.id.txtTitle)
-        val txtGenre: TextView = itemView.findViewById(R.id.txtGenre)
-        val txtRelease: TextView = itemView.findViewById(R.id.txtRelease)
+        val txtTitle: TextView = itemView.findViewById(R.id.txtMvTitle)
+        val txtMvTvRating: TextView = itemView.findViewById(R.id.txtMvTvRating)
+        val txtRelease: TextView = itemView.findViewById(R.id.txtMvRelease)
         val imageMovie: ImageView = itemView.findViewById(R.id.imageMovie)
     }
 
@@ -49,7 +49,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ListViewHolder>() {
         val movieItem = listMovie[position]
 
         holder.txtTitle.text = movieItem.title
-        holder.txtGenre.text = movieItem.voteAverage.toString()
+        holder.txtMvTvRating.text = movieItem.voteAverage.toString()
         holder.txtRelease.text = movieItem.releaseDate.toString()
 
 
