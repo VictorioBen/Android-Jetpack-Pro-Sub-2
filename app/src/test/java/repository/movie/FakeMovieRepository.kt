@@ -1,4 +1,4 @@
-package source.remote.repository.movie
+package repository.movie
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,20 +8,13 @@ import kotlinx.coroutines.launch
 import source.entity.movie.MovieResultEntity
 import source.entity.movie.MovieDetailEntity
 import source.remote.RemoteDataSourceImpl
+import source.remote.repository.movie.MovieRepository
 import source.remote.response.movie.MovieDetailResponse
 import source.remote.response.movie.MovieResultItem
 
 
-class MovieRepositoryImpl private constructor(private val remoteDataSourceImpl: RemoteDataSourceImpl) : MovieRepository {
-
-    companion object {
-        @Volatile
-        private var instance: MovieRepositoryImpl? = null
-        fun getInstance(remoteDataImpl: RemoteDataSourceImpl): MovieRepositoryImpl =
-            instance ?: synchronized(this) {
-                instance ?: MovieRepositoryImpl(remoteDataImpl).apply { instance = this }
-            }
-    }
+class FakeMovieRepository(private val remoteDataSourceImpl: RemoteDataSourceImpl) :
+    MovieRepository {
 
     override  fun getPopularMovie(): LiveData<List<MovieResultEntity>> {
         val movieResult = MutableLiveData<List<MovieResultEntity>>()

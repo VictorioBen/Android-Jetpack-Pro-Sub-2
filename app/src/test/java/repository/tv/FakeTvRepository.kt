@@ -1,4 +1,4 @@
-package source.remote.repository.tv
+package repository.tv
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,20 +8,13 @@ import kotlinx.coroutines.launch
 import source.entity.tv.TvDetailEntity
 import source.entity.tv.TvResultEntity
 import source.remote.RemoteDataSourceImpl
+import source.remote.repository.tv.TvRepository
 import source.remote.response.tv.TvResponseDetail
 import source.remote.response.tv.TvResultsItem
 
-class TvRepositoryImpl private constructor(private val remoteDataSourceImpl: RemoteDataSourceImpl) :
+class FakeTvRepository(private val remoteDataSourceImpl: RemoteDataSourceImpl) :
     TvRepository {
 
-    companion object {
-        @Volatile
-        private var instance: TvRepositoryImpl? = null
-        fun getInstance(remoteDataImpl: RemoteDataSourceImpl): TvRepositoryImpl =
-            instance ?: synchronized(this) {
-                instance ?: TvRepositoryImpl(remoteDataImpl).apply { instance = this }
-            }
-    }
 
     override fun getTvPopular(): LiveData<List<TvResultEntity>> {
         val tvResult = MutableLiveData<List<TvResultEntity>>()
