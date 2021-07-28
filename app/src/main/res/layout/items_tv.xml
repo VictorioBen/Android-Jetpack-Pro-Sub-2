@@ -64,13 +64,13 @@
 
             <TextView
                 android:id="@+id/txtTagline"
-                android:layout_width="160dp"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:layout_marginStart="40dp"
                 android:text="@string/sub_genre"
                 android:textColor="@color/White"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView4"
                 app:layout_constraintTop_toBottomOf="@+id/txtTitleTvDetail"
                 tools:ignore="RtlHardcoded" />
@@ -89,12 +89,13 @@
 
             <TextView
                 android:id="@+id/txtFirstAirDate"
-                android:layout_width="wrap_content"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:text="@string/date_release"
                 android:textColor="@color/White"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/txtTagline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
                 app:layout_constraintTop_toTopOf="@+id/textView6" />
 
             <TextView
@@ -111,12 +112,13 @@
 
             <TextView
                 android:id="@+id/txtSeason"
-                android:layout_width="wrap_content"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:text="@string/number_season"
                 android:textColor="@color/White"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/txtFirstAirDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
                 app:layout_constraintTop_toTopOf="@+id/textView8" />
 
             <TextView
